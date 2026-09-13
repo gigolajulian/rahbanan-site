@@ -72,7 +72,6 @@ p{margin:0}
   font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;
   color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:10px;
 }
-.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
 
 /* ═══ header ══════════════════════════════════════════════ */
 .hdr{position:fixed;inset:0 0 auto;z-index:100;transition:background .35s,backdrop-filter .35s,border-color .35s;
@@ -117,7 +116,6 @@ body.nav-open .burger span:nth-child(3){transform:translateY(-5px) rotate(-45deg
   align-items:center;justify-content:center;text-align:center;padding:48px 0 56px}
 
 .hero__eyebrow{justify-content:center}
-.hero__eyebrow::after{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
 
 .hero__h1{font-size:clamp(40px,7.8vw,116px);font-weight:700;letter-spacing:-.045em;
   max-width:16ch;display:flex;flex-wrap:wrap;justify-content:center;
