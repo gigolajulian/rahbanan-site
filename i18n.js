@@ -49,8 +49,8 @@ const FA = {
     'هر محموله یک شماره پرونده می‌گیرد. رزرو، گمرک، تحویل و رهگیری همه زیر همان شماره است.',
   'Land': 'زمینی',
   'FTL and LTL loads through Europe': 'بارهای FTL و LTL در سراسر اروپا',
-  'We cover Europe, with hubs in Dartford, Paris, Lyon, Nürnberg, Vienna, Milan and Istanbul — providing direct LTL services at daily intervals with the shortest transit time.':
-    'سراسر اروپا را با هاب‌هایی در دارتفورد، پاریس، لیون، نورنبرگ، وین، میلان و استانبول پوشش می‌دهیم — با سرویس مستقیم LTL در فواصل روزانه و کوتاه‌ترین زمان حمل.',
+  'We cover Europe, with hubs in Dartford, Paris, Lyon, Nürnberg, Vienna, Milan and Istanbul, providing direct LTL services at daily intervals with the shortest transit time.':
+    'سراسر اروپا را با هاب‌هایی در دارتفورد، پاریس، لیون، نورنبرگ، وین، میلان و استانبول پوشش می‌دهیم، با سرویس مستقیم LTL در فواصل روزانه و کوتاه‌ترین زمان حمل.',
   'Daily departures': 'حرکت روزانه',
   'Rail': 'ریلی',
   'Multimodal land-bridge services': 'سرویس‌های پل زمینی چندوجهی',
@@ -66,8 +66,8 @@ const FA = {
   'Airport to door': 'فرودگاه تا درب',
   'Sea': 'دریایی',
   'FCL and LCL services globally': 'سرویس‌های FCL و LCL در سراسر جهان',
-  'We offer worldwide coverage: direct through major shipping lines, and indirect via NVO services — without cross-stuffing of goods, to and from Iranian ports.':
-    'پوشش جهانی ارائه می‌دهیم: مستقیم از طریق خطوط کشتیرانی اصلی و غیرمستقیم از طریق سرویس‌های NVO — بدون تخلیه و بارگیری مجدد کالا، از و به بنادر ایران.',
+  'We offer worldwide coverage: direct through major shipping lines, and indirect via NVO services, without cross-stuffing of goods, to and from Iranian ports.':
+    'پوشش جهانی ارائه می‌دهیم: مستقیم از طریق خطوط کشتیرانی اصلی و غیرمستقیم از طریق سرویس‌های NVO، بدون تخلیه و بارگیری مجدد کالا، از و به بنادر ایران.',
   'No cross-stuffing': 'بدون تخلیهٔ مجدد',
   'Coverage': 'پوشش', 'Departures': 'حرکت', 'Service': 'سرویس', 'Cargo': 'نوع بار',
   'Terms': 'شرایط', 'Via': 'از طریق',
@@ -97,11 +97,11 @@ const FA = {
   'Multimodal land bridge': 'پل زمینی چندوجهی',
   'DDU & DDP air freight': 'حمل هوایی DDU و DDP',
   'FCL & LCL ocean freight': 'حمل دریایی FCL و LCL',
-  'Pick two different places — origin and destination are the same.':
-    'دو مکان متفاوت انتخاب کنید — مبدأ و مقصد یکسان هستند.',
-  'Transit times are indicative door-to-door bands, excluding customs dwell —':
-    'زمان‌های حمل، بازه‌های تقریبی درب تا درب و بدون احتساب توقف گمرکی است —',
-  'ask us for a firm quote on this lane': 'برای این مسیر نرخ قطعی بگیرید',
+  'Origin and destination are the same. Pick two different places.':
+    'مبدأ و مقصد یکسان هستند. دو مکان متفاوت انتخاب کنید.',
+  'Transit times are indicative door-to-door bands, excluding customs dwell.':
+    'زمان‌های حمل، بازه‌های تقریبی درب تا درب و بدون احتساب توقف گمرکی است.',
+  'Ask us for a firm quote on this lane': 'برای این مسیر نرخ قطعی بگیرید',
 
   /* lane notes */
   'Direct LTL departs daily from our European hubs; rail runs as a land bridge via Türkiye.':
@@ -114,8 +114,8 @@ const FA = {
     'FTL و LTL میان هاب‌های خودمان، در فواصل روزانه.',
   'Domestic haulage and customs clearance handled by the Tehran office.':
     'حمل داخلی و ترخیص گمرکی توسط دفتر تهران انجام می‌شود.',
-  'FCL and LCL direct through major lines, or NVO — no cross-stuffing of goods.':
-    'FCL و LCL مستقیم از خطوط اصلی یا از طریق NVO — بدون تخلیهٔ مجدد کالا.',
+  'FCL and LCL direct through major lines, or NVO, with no cross-stuffing of goods.':
+    'FCL و LCL مستقیم از خطوط اصلی یا از طریق NVO، بدون تخلیهٔ مجدد کالا.',
   'Airport-to-door with DDU and DDP, or port-to-port by sea.':
     'فرودگاه تا درب با DDU و DDP، یا بندر تا بندر از راه دریا.',
   'Consolidated in Istanbul for onward European or Iranian delivery.':
@@ -239,8 +239,8 @@ const FA = {
   'Send request': 'ارسال درخواست',
   'Goes to': 'ارسال به',
   '. We reply within one working day.': '. ظرف یک روز کاری پاسخ می‌دهیم.',
-  'Your email client should now be open with the request filled in — just press send. If nothing happened, mail us at tehran@rahbanan.com.':
-    'برنامهٔ ایمیل شما باید با درخواست تکمیل‌شده باز شده باشد — کافی است ارسال را بزنید. اگر باز نشد، به tehran@rahbanan.com ایمیل بزنید.',
+  'Your email client should now be open with the request filled in. Just press send. If nothing happened, mail us at tehran@rahbanan.com.':
+    'برنامهٔ ایمیل شما باید با درخواست تکمیل‌شده باز شده باشد. کافی است ارسال را بزنید. اگر باز نشد، به tehran@rahbanan.com ایمیل بزنید.',
 
   /* ── contact + footer ── */
   'Contact us': 'تماس با ما',

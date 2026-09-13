@@ -63,7 +63,7 @@ const LANES = {
   'IR|IR': { land: '1–3 days',  rail: '3–5 days',   air: '1 day',     sea: null,
              note: 'Domestic haulage and customs clearance handled by the Tehran office.' },
   'IR|WW': { land: null,        rail: null,         air: '3–6 days',  sea: '25–40 days',
-             note: 'FCL and LCL direct through major lines, or NVO — no cross-stuffing of goods.' },
+             note: 'FCL and LCL direct through major lines, or NVO, with no cross-stuffing of goods.' },
   'EU|WW': { land: null,        rail: null,         air: '2–5 days',  sea: '20–35 days',
              note: 'Airport-to-door with DDU and DDP, or port-to-port by sea.' },
   'TR|WW': { land: null,        rail: null,         air: '2–5 days',  sea: '18–30 days',
@@ -499,7 +499,7 @@ function showLane() {
   const B = PLACES.find(p => p.id === fTo.value);
 
   if (A.id === B.id) {
-    fOut.innerHTML = `<p class="note">${tr('Pick two different places — origin and destination are the same.')}</p>`;
+    fOut.innerHTML = `<p class="note">${tr('Origin and destination are the same. Pick two different places.')}</p>`;
     return;
   }
 
@@ -517,8 +517,8 @@ function showLane() {
         </li>`).join('')}
     </ul>
     <p class="note"><span>${tr(lane.note)}</span>
-      <span>${tr('Transit times are indicative door-to-door bands, excluding customs dwell —')}</span>
-      <a href="#quote" data-lane>${tr('ask us for a firm quote on this lane')}</a>.
+      <span>${tr('Transit times are indicative door-to-door bands, excluding customs dwell.')}</span>
+      <a href="#quote" data-lane>${tr('Ask us for a firm quote on this lane')}</a>.
     </p>`;
 
   paint(fOut);
@@ -640,10 +640,10 @@ $('#quoteForm').addEventListener('submit', (e) => {
     .map(el => `${el.name}: ${el.value}`);
   const body = ['Quote request from rahbanan.com', '', ...lines].join('\n');
   location.href = `mailto:tehran@rahbanan.com`
-    + `?subject=${encodeURIComponent(`Quote request — ${f.From.value} to ${f.To.value}`)}`
+    + `?subject=${encodeURIComponent(`Quote request: ${f.From.value} to ${f.To.value}`)}`
     + `&body=${encodeURIComponent(body)}`;
   $('#quoteMsg').textContent = tr('Your email client should now be open with the request '
-    + 'filled in — just press send. If nothing happened, mail us at tehran@rahbanan.com.');
+    + 'filled in. Just press send. If nothing happened, mail us at tehran@rahbanan.com.');
 });
 
 /* Re-render anything we generated when the language flips. */
