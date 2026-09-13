@@ -33,8 +33,8 @@ const FA = {
   'Transport': 'حمل‌ونقل',
   'is': 'است',
   'art.': 'هنر',
-  'Four decades moving most types of goods through most types of routes. Road, rail, air and sea — from our own European hubs to Iranian ports, and back.':
-    'چهار دهه جابه‌جایی بیشتر انواع کالا از بیشتر انواع مسیرها. جاده، ریل، هوا و دریا — از هاب‌های اروپایی خودمان تا بنادر ایران، و بالعکس.',
+  'A Tehran freight forwarder. For over forty years we have moved goods between Europe and Iran by road, rail, air and sea, through our own hubs from Dartford to Istanbul.':
+    'شرکت فورواردری در تهران. بیش از چهل سال است که کالا را میان اروپا و ایران از راه جاده، ریل، هوا و دریا جابه‌جا می‌کنیم؛ از طریق هاب‌های خودمان از دارتفورد تا استانبول.',
   'Track a shipment': 'رهگیری محموله',
   'Move your cursor across the map': 'نشانگر را روی نقشه حرکت دهید',
   'Years of trade': 'سال فعالیت',
@@ -45,8 +45,8 @@ const FA = {
 
   /* ── services ── */
   'Four modes, one file number.': 'چهار شیوهٔ حمل، یک شماره پرونده.',
-  'Whatever the leg, the paperwork, the customs and the tracking stay in one place — ours.':
-    'مسیر هر چه باشد، مدارک، ترخیص گمرکی و رهگیری همه یک‌جا می‌مانند — نزد ما.',
+  'Every shipment gets one file number. Booking, customs, delivery and tracking all sit under it.':
+    'هر محموله یک شماره پرونده می‌گیرد. رزرو، گمرک، تحویل و رهگیری همه زیر همان شماره است.',
   'Land': 'زمینی',
   'FTL and LTL loads through Europe': 'بارهای FTL و LTL در سراسر اروپا',
   'We cover Europe, with hubs in Dartford, Paris, Lyon, Nürnberg, Vienna, Milan and Istanbul — providing direct LTL services at daily intervals with the shortest transit time.':
@@ -136,17 +136,19 @@ const FA = {
     'تجمیع‌شده از شانگهای، شنژن و بوسان.',
 
   /* ── network ── */
-  'Our own hubs, not a broker’s address book.': 'هاب‌های خودمان، نه دفترچه‌تلفن یک واسطه.',
-  'Seven European hubs feed one corridor east through Istanbul into Iran — which is why our LTL leaves daily instead of when a trailer happens to fill. The same corridor runs on past Tehran, through Kazakhstan and Ürümqi to Xi’an, Shanghai and the East Asian ports.':
-    'هفت هاب اروپایی یک کریدور واحد را از مسیر استانبول به سمت شرق و به ایران تغذیه می‌کنند — به همین دلیل LTL ما روزانه حرکت می‌کند، نه هر وقت که تریلر پر شود. همین کریدور از تهران به بعد نیز از قزاقستان و ارومچی تا شی‌آن، شانگهای و بنادر شرق آسیا ادامه می‌یابد.',
-  'Head office sits in Tehran, where the customs file, the delivery order and the last mile are handled by the same team that booked the space.':
-    'دفتر مرکزی در تهران است؛ جایی که پروندهٔ گمرکی، ترخیصیه و آخرین مرحلهٔ تحویل را همان تیمی انجام می‌دهد که فضا را رزرو کرده است.',
+  'Our own hubs.':
+    'هاب‌های خودمان.',
+  'Seven hubs in Europe consolidate cargo for the corridor through Istanbul into Iran. LTL leaves each hub daily. East of Tehran the corridor continues through Kazakhstan and Ürümqi to Xi’an, Shanghai and the East Asian ports.':
+    'هفت هاب در اروپا بار را برای کریدور استانبول به ایران تجمیع می‌کنند. LTL هر روز از هر هاب حرکت می‌کند. در شرق تهران، کریدور از قزاقستان و ارومچی تا شی‌آن، شانگهای و بنادر شرق آسیا ادامه دارد.',
+  'Head office is in Tehran. The team that books the space also handles customs, the delivery order and final delivery.':
+    'دفتر مرکزی در تهران است. همان تیمی که فضا را رزرو می‌کند، گمرک، ترخیصیه و تحویل نهایی را هم انجام می‌دهد.',
   'Talk to the Tehran desk': 'تماس با دفتر تهران',
   'Head office': 'دفتر مرکزی',
 
   /* ── track & trace ── */
   'Track & trace': 'رهگیری محموله',
-  'Where is it, right now.': 'همین حالا کجاست.',
+  'Track a shipment.':
+    'رهگیری محموله.',
   'Search by bill of lading, container or truck number, or by our file number.':
     'با شمارهٔ بارنامه، کانتینر یا کامیون، یا با شمارهٔ پروندهٔ ما جست‌وجو کنید.',
   'CNTR / Truck': 'کانتینر / کامیون',
@@ -199,19 +201,19 @@ const FA = {
     '«ما کسب‌وکاری با بیش از ۴۰ سال سابقه هستیم و بیشتر انواع کالا را از مسیرهای گوناگون جابه‌جا کرده‌ایم.»',
   'Rahbanan International Transport Co. Ltd.': 'شرکت حمل‌ونقل بین‌المللی رهبانان (مسئولیت محدود)',
   'Flexible': 'انعطاف‌پذیر',
-  'Odd dimensions, odd routings, odd deadlines. Forty years of them.':
-    'ابعاد غیرمعمول، مسیرهای غیرمعمول، مهلت‌های غیرمعمول. چهل سال تجربهٔ همین‌ها.',
+  'Out-of-gauge cargo, unusual routings, tight deadlines.':
+    'بار خارج از ابعاد، مسیرهای غیرمعمول، مهلت‌های فشرده.',
   'Competitive': 'رقابتی',
   'Direct line and airline contracts, plus NVO options where they price better.':
     'قرارداد مستقیم با خطوط کشتیرانی و هواپیمایی، به‌علاوهٔ گزینه‌های NVO هر جا که نرخ بهتری داشته باشند.',
   'Customer oriented': 'مشتری‌مدار',
-  'One named contact from booking to delivery order. No handover, no ticket queue.':
-    'یک نفر مشخص از لحظهٔ رزرو تا صدور ترخیصیه. بدون تحویل‌وتحول، بدون صف تیکت.',
+  'One named contact from booking to delivery order.':
+    'یک نفر مشخص از رزرو تا صدور ترخیصیه.',
 
   /* ── quote form ── */
   'Receive a quote for your shipment.': 'برای محمولهٔ خود نرخ بگیرید.',
-  'The more you can tell us, the sharper the number. Everything here is optional except contact and route.':
-    'هرچه بیشتر بگویید، نرخ دقیق‌تر می‌شود. به‌جز اطلاعات تماس و مسیر، باقی موارد اختیاری است.',
+  'Contact details and route are required. Everything else helps us price it accurately.':
+    'اطلاعات تماس و مسیر الزامی است. بقیهٔ موارد به قیمت‌گذاری دقیق‌تر کمک می‌کند.',
   'Contact information': 'اطلاعات تماس',
   'Full name *': 'نام و نام خانوادگی *',
   'Company': 'شرکت',
