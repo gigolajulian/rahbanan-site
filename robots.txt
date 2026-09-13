@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gigolajulian.github.io/rahbanan-site/sitemap.xml
