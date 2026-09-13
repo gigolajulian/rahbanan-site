@@ -600,6 +600,12 @@ function renderShipment(s, ref) {
 
 const esc = str => str.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
+/* a service panel's CTA arrives at the quote form with its mode chosen */
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-quote-mode]');
+  if (a) $('#qMode').value = a.dataset.quoteMode;
+});
+
 /* ───────────────────────── quote form ──────────────────── */
 /* No backend needed: compose a complete mail to the Tehran desk.
    ponytail: swap for a POST when you have somewhere to post to. */

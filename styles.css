@@ -166,38 +166,46 @@ section[id]{scroll-margin-top:78px}
 .sec__hd h2{font-size:clamp(30px,3.6vw,46px)}
 .sec__lead{margin-top:16px;color:var(--muted);font-size:17px}
 
-/* ── service cards ────────────────────────────────────────── */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:20px}
-.card{
-  display:flex;flex-direction:column;            /* so the tag row pins to the bottom */
-  position:relative;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);
-  background:var(--surface);padding:0 0 24px;
-  transition:transform .35s var(--ease),border-color .35s,background .35s;
-}
-.cards.in .card:hover{transform:translateY(-6px);border-color:var(--line-2);background:rgba(255,255,255,.06)}
-
-/* Duotone: desaturate the photo, then tint it with the brand blue, so four
-   unrelated stock shots read as one deliberate set. */
-.card__media{position:relative;aspect-ratio:5/3;overflow:hidden;background:var(--ink-3)}
-.card__media img{width:100%;height:100%;object-fit:cover;
-  filter:grayscale(1) contrast(1.12) brightness(.78);
-  transition:transform .8s var(--ease)}
-.card:hover .card__media img{transform:scale(1.05)}
-.card__media::before{content:"";position:absolute;inset:0;z-index:1;
+/* ── services: stacking panels ────────────────────────────────
+   Mobile-first. Each panel is a full-bleed photo with the copy over it,
+   sticky under the header; scrolling brings the next one up over it. */
+.svcs{counter-reset:svc;display:grid;gap:14px}
+.svc{counter-increment:svc;position:sticky;top:calc(76px + var(--i,0) * 12px);
+  min-height:78svh;display:flex;align-items:flex-end;
+  border-radius:22px;overflow:hidden;isolation:isolate;
+  border:1px solid var(--line-2);background:var(--ink-3);
+  box-shadow:0 -14px 44px -22px rgba(0,0,0,.85)}
+.svc__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
+  filter:grayscale(1) contrast(1.1) brightness(.74)}
+.svc::before{content:"";position:absolute;inset:0;z-index:-1;   /* brand duotone */
   background:var(--blue);mix-blend-mode:color;opacity:.9}
-.card__media::after{content:"";position:absolute;inset:0;z-index:2;
-  background:linear-gradient(180deg,rgba(4,16,31,0) 35%,rgba(4,16,31,.9) 88%,var(--ink))}
+.svc::after{content:"";position:absolute;inset:0;z-index:-1;    /* legibility */
+  background:linear-gradient(180deg,rgba(4,16,31,.08) 0%,rgba(4,16,31,.42) 42%,rgba(4,16,31,.97) 100%)}
 
-.card__kicker{margin:20px 22px 10px;padding-top:0;font:700 11px/1 var(--sans);
-  letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
-  display:flex;align-items:center;gap:9px}
-.card__kicker::before{content:"";width:18px;height:1px;background:var(--gold);flex:none}
-.card h3{margin:0 22px 11px;font-size:19.5px;line-height:1.28}
-.card > p{margin:0 22px;color:var(--muted);font-size:14.6px}
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin:20px 22px 0;padding:0;list-style:none;
-  margin-top:auto;padding-top:20px}
-.tags li{font-size:11.5px;letter-spacing:.05em;color:var(--muted);
-  border:1px solid var(--line);border-radius:999px;padding:4px 11px}
+/* outlined ghost numeral in the corner; the number comes from a CSS counter */
+.svc__n{position:absolute;inset-inline-start:18px;top:10px;pointer-events:none;user-select:none;
+  font:800 clamp(84px,22vw,168px)/1 var(--disp);letter-spacing:-.05em;
+  color:transparent;-webkit-text-stroke:1px rgba(247,238,7,.42)}
+.svc__n::before{content:counter(svc,decimal-leading-zero)}
+
+.svc__in{position:relative;width:100%;max-width:680px;padding:28px 22px 26px}
+.svc__k{display:flex;align-items:center;gap:10px;margin-bottom:12px;
+  font:700 11.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.svc__k::before{content:counter(svc,decimal-leading-zero);opacity:.75}
+.svc h3{font-size:clamp(26px,6vw,42px);line-height:1.1;margin-bottom:12px;max-width:16ch}
+.svc__in > p{color:#b9c8dc;font-size:15.5px;max-width:54ch}
+.svc .tags{margin:18px 0 0}
+.svc .tags li{border-color:rgba(255,255,255,.22);color:var(--text)}
+.svc .btn{margin-top:22px}
+
+html[lang="fa"] .svc__n::before,html[lang="fa"] .svc__k::before{content:"۰" counter(svc,persian)}
+
+@media (min-width:860px){
+  .svc{min-height:min(640px,76vh);top:calc(76px + var(--i,0) * 14px)}
+  .svc__in{padding:56px}
+  .svc__n{inset-inline-start:40px;top:22px}
+  .svc__in > p{font-size:17px}
+}
 
 /* ── route finder ─────────────────────────────────────────── */
 .finder{border:1px solid var(--line);border-radius:22px;background:var(--surface);
@@ -421,7 +429,7 @@ html[lang="fa"] body{font-family:"Vazirmatn",var(--sans);
 html[lang="fa"] h1,html[lang="fa"] h2,html[lang="fa"] h3,html[lang="fa"] h4,
 html[lang="fa"] .stats dd,html[lang="fa"] .brand__txt strong{
   font-family:"Vazirmatn",var(--disp);letter-spacing:0;line-height:1.35}
-html[lang="fa"] .eyebrow,html[lang="fa"] .card__kicker,html[lang="fa"] .stats dt,
+html[lang="fa"] .eyebrow,html[lang="fa"] .svc__k,html[lang="fa"] .stats dt,
 html[lang="fa"] .hubs span,html[lang="fa"] .ccard__k,html[lang="fa"] .meta div span,
 html[lang="fa"] .ftr__col h4,html[lang="fa"] .badge,html[lang="fa"] .hero__hint,
 html[lang="fa"] .field label,html[lang="fa"] .quote legend,html[lang="fa"] .brand__txt small{
@@ -466,11 +474,11 @@ html[lang="fa"] .sec .eyebrow::after{content:"۰" counter(sec,persian)}
           mask-image:radial-gradient(70% 70% at 50% 35%,#000 20%,transparent 100%)}
 
 /* a soft light follows the cursor across interactive surfaces */
-.card,.ccard,.mode,.hubs li{position:relative}
-.card::after,.ccard::after,.mode::after,.hubs li::after{content:"";position:absolute;inset:0;
+.ccard,.mode,.hubs li{position:relative}
+.ccard::after,.mode::after,.hubs li::after{content:"";position:absolute;inset:0;
   pointer-events:none;opacity:0;transition:opacity .4s var(--ease);border-radius:inherit;
   background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(247,238,7,.10),transparent 62%)}
-.card:hover::after,.ccard:hover::after,.mode:hover::after,.hubs li:hover::after{opacity:1}
+.ccard:hover::after,.mode:hover::after,.hubs li:hover::after{opacity:1}
 .mode,.hubs li{overflow:hidden}
 
 /* results arrive rather than appear */

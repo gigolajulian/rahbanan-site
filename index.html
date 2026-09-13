@@ -96,40 +96,53 @@
       <p class="sec__lead">Whatever the leg, the paperwork, the customs and the tracking stay in one place — ours.</p>
     </header>
 
-    <div class="cards" data-reveal data-stagger>
-
-      <article class="card">
-        <div class="card__media"><img src="assets/land.jpg" alt="Curtainsider trailer on a rural trunk road, seen from the air." loading="lazy" width="900" height="506"></div>
-        <p class="card__kicker">Land</p>
-        <h3>FTL and LTL loads through Europe</h3>
-        <p>We cover Europe, with hubs in Dartford, Paris, Lyon, Nürnberg, Vienna, Milan and Istanbul — providing direct LTL services at daily intervals with the shortest transit time.</p>
-        <ul class="tags"><li>FTL</li><li>LTL</li><li>Daily departures</li></ul>
+    <!-- each panel sticks under the header and is covered by the next as you
+         scroll — one service per screenful, no hover, no JS -->
+    <div class="svcs">
+      <article class="svc" style="--i:0">
+        <img class="svc__img" src="assets/land.jpg" alt="Curtainsider trailer on a rural trunk road, seen from the air." loading="lazy" width="900" height="506">
+        <span class="svc__n" aria-hidden="true"></span>
+        <div class="svc__in">
+          <p class="svc__k">Land</p>
+          <h3>FTL and LTL loads through Europe</h3>
+          <p>We cover Europe, with hubs in Dartford, Paris, Lyon, Nürnberg, Vienna, Milan and Istanbul — providing direct LTL services at daily intervals with the shortest transit time.</p>
+          <ul class="tags"><li>FTL</li><li>LTL</li><li>Daily departures</li></ul>
+          <a class="btn btn--gold" href="#quote" data-quote-mode="Land">Get a quote</a>
+        </div>
       </article>
-
-      <article class="card">
-        <div class="card__media"><img src="assets/rail.jpg" alt="Containerised freight train standing in a city rail yard." loading="lazy" width="900" height="598"></div>
-        <p class="card__kicker">Rail</p>
-        <h3>Multimodal land-bridge services</h3>
-        <p>We handle rail shipments mainly from Turkey, conventionally and containerised, and also combined multimodal services.</p>
-        <ul class="tags"><li>Containerised</li><li>Conventional</li><li>Land bridge</li></ul>
+      <article class="svc" style="--i:1">
+        <img class="svc__img" src="assets/rail.jpg" alt="Containerised freight train standing in a city rail yard." loading="lazy" width="900" height="598">
+        <span class="svc__n" aria-hidden="true"></span>
+        <div class="svc__in">
+          <p class="svc__k">Rail</p>
+          <h3>Multimodal land-bridge services</h3>
+          <p>We handle rail shipments mainly from Turkey, conventionally and containerised, and also combined multimodal services.</p>
+          <ul class="tags"><li>Containerised</li><li>Conventional</li><li>Land bridge</li></ul>
+          <a class="btn btn--gold" href="#quote" data-quote-mode="Rail">Get a quote</a>
+        </div>
       </article>
-
-      <article class="card">
-        <div class="card__media"><img src="assets/air.jpg" alt="Freighter aircraft being loaded with palletised cargo on the apron." loading="lazy" width="900" height="600"></div>
-        <p class="card__kicker">Air</p>
-        <h3>Efficient air freight handling</h3>
-        <p>Through our extensive network we ship in and out, connecting all major airports, with DDU and DDP services.</p>
-        <ul class="tags"><li>DDU</li><li>DDP</li><li>Airport to door</li></ul>
+      <article class="svc" style="--i:2">
+        <img class="svc__img" src="assets/air.jpg" alt="Freighter aircraft being loaded with palletised cargo on the apron." loading="lazy" width="900" height="600">
+        <span class="svc__n" aria-hidden="true"></span>
+        <div class="svc__in">
+          <p class="svc__k">Air</p>
+          <h3>Efficient air freight handling</h3>
+          <p>Through our extensive network we ship in and out, connecting all major airports, with DDU and DDP services.</p>
+          <ul class="tags"><li>DDU</li><li>DDP</li><li>Airport to door</li></ul>
+          <a class="btn btn--gold" href="#quote" data-quote-mode="Air">Get a quote</a>
+        </div>
       </article>
-
-      <article class="card">
-        <div class="card__media"><img src="assets/sea.jpg" alt="Fully laden container vessel under way." loading="lazy" width="900" height="1125"></div>
-        <p class="card__kicker">Sea</p>
-        <h3>FCL and LCL services globally</h3>
-        <p>We offer worldwide coverage: direct through major shipping lines, and indirect via NVO services — without cross-stuffing of goods, to and from Iranian ports.</p>
-        <ul class="tags"><li>FCL</li><li>LCL</li><li>No cross-stuffing</li></ul>
+      <article class="svc" style="--i:3">
+        <img class="svc__img" src="assets/sea.jpg" alt="Fully laden container vessel under way." loading="lazy" width="900" height="1125">
+        <span class="svc__n" aria-hidden="true"></span>
+        <div class="svc__in">
+          <p class="svc__k">Sea</p>
+          <h3>FCL and LCL services globally</h3>
+          <p>We offer worldwide coverage: direct through major shipping lines, and indirect via NVO services — without cross-stuffing of goods, to and from Iranian ports.</p>
+          <ul class="tags"><li>FCL</li><li>LCL</li><li>No cross-stuffing</li></ul>
+          <a class="btn btn--gold" href="#quote" data-quote-mode="Sea">Get a quote</a>
+        </div>
       </article>
-
     </div>
   </div>
 </section>
@@ -260,13 +273,13 @@
           <div class="field">
             <label for="qMode">Preferred mode</label>
             <select id="qMode" name="Mode">
-              <option>No preference</option><option>Land</option><option>Rail</option><option>Air</option><option>Sea</option>
+              <option value="">No preference</option><option value="Land">Land</option><option value="Rail">Rail</option><option value="Air">Air</option><option value="Sea">Sea</option>
             </select>
           </div>
           <div class="field">
             <label for="qIncoterm">Incoterm</label>
             <select id="qIncoterm" name="Incoterm">
-              <option>Not sure</option><option>EXW</option><option>FCA</option><option>FOB</option><option>CIF</option><option>DAP</option><option>DDP</option>
+              <option value="">Not sure</option><option>EXW</option><option>FCA</option><option>FOB</option><option>CIF</option><option>DAP</option><option>DDP</option>
             </select>
           </div>
           <div class="field"><label for="qGoods">Commodity</label><input id="qGoods" name="Goods" placeholder="What is it?"></div>
