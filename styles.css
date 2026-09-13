@@ -167,14 +167,46 @@ section[id]{scroll-margin-top:78px}
 /* ── services: the manifest ──────────────────────────────────
    Mobile-first. A typographic row per mode, like a departures board:
    number + huge name, headline + copy, a small spec table, a CTA.
-   Phones get a small thumb beside the name; desktop is type only. */
+   Each row carries a small line-art vehicle running in place. */
 .manifest{counter-reset:row;border-top:1px solid var(--line)}
 .row{counter-increment:row;position:relative;display:grid;gap:20px;
   padding:34px 0 36px;border-bottom:1px solid var(--line)}
 
 .row__id{display:flex;align-items:center;gap:16px}
-.row__thumb{width:64px;height:64px;flex:none;object-fit:cover;border-radius:12px;
-  border:1px solid var(--line-2);filter:saturate(.8)}
+
+/* the vehicle: inline line art, animated in CSS only, flipped for RTL */
+.row__anim{flex:none;width:118px;height:59px;display:block;color:rgba(233,240,249,.85)}
+.row__anim *{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;
+  stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.row__anim .f{fill:rgba(255,255,255,.06)}
+.row__anim .g{stroke:var(--gold)}
+.row__anim .gf{fill:rgba(247,238,7,.2);stroke:var(--gold)}
+.row__anim .m{stroke:var(--muted);opacity:.75}
+[dir="rtl"] .row__anim{transform:scaleX(-1)}
+
+.row__anim .road{--d:-28px;animation:dash 1s linear infinite}
+.row__anim .fast{--d:-14px;animation:dash .5s linear infinite}
+.row__anim .rail{--d:-24px;animation:dash 1.1s linear infinite}
+.row__anim .trail{--d:-13px;animation:dash .6s linear infinite}
+.row__anim .t2{--d:-12px}
+.row__anim .wh{transform-origin:0 0;animation:spin 1s linear infinite}
+.row__anim .body{animation:bob 1.3s ease-in-out infinite}
+.row__anim .puff{transform-box:fill-box;transform-origin:center;animation:puff 1.8s ease-out infinite}
+.row__anim .p2{animation-delay:.9s}
+.row__anim .plane{transform-box:fill-box;transform-origin:center;animation:fly 3s ease-in-out infinite}
+.row__anim .cloud{animation:drift 9s linear infinite}
+.row__anim .ship{transform-box:fill-box;transform-origin:center;animation:roll 3.2s ease-in-out infinite}
+.row__anim .wave{animation:wave 2.2s linear infinite}
+.row__anim .w2{animation-duration:3.1s;opacity:.4}
+.row__anim .bird{animation:bob 2.4s ease-in-out infinite}
+@keyframes dash{to{stroke-dashoffset:var(--d)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.6px)}}
+@keyframes puff{0%{transform:translate(0,0) scale(.4);opacity:.7}100%{transform:translate(-14px,-18px) scale(1.5);opacity:0}}
+@keyframes fly{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-1.5deg)}}
+@keyframes drift{to{transform:translateX(-200px)}}
+@keyframes roll{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-2px) rotate(1.8deg)}}
+@keyframes wave{to{transform:translateX(-40px)}}
 .row__name{font:800 clamp(44px,12vw,80px)/.92 var(--disp);letter-spacing:-.045em;
   text-transform:uppercase;transition:color .3s var(--ease)}
 .row__name::before{content:counter(row,decimal-leading-zero);display:block;margin-bottom:10px;
@@ -198,10 +230,11 @@ html[lang="fa"] .row__name{letter-spacing:0;line-height:1.15}
 [dir="rtl"] .row__cta span{transform:scaleX(-1)}
 [dir="rtl"] .row__cta:hover span{transform:scaleX(-1) translateX(5px)}
 
-/* desktop: three columns, no thumb */
+/* desktop: three columns, vehicle above the name */
 @media (min-width:900px){
   .row{grid-template-columns:1.1fr 1.7fr 1fr;gap:44px;padding:50px 0 54px;align-items:start}
-  .row__thumb{display:none}
+  .row__id{flex-direction:column;align-items:flex-start;gap:18px}
+  .row__anim{width:210px;height:105px}
   .row__aside{border-top:0;padding-top:8px}
   .row:hover .row__name{color:var(--gold)}
   .row::before{content:"";position:absolute;inset:0 -28px;border-radius:18px;z-index:-1;

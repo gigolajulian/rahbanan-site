@@ -9,7 +9,7 @@ index.html    markup (English source copy)
 styles.css    design system, RTL rules, animations
 app.js        particle world map, route finder, track & trace, quote form
 i18n.js       English ⇄ Farsi dictionary and runtime
-assets/       logo + four Unsplash photos
+assets/       logo + one Unsplash photo (About background)
 ```
 
 ## Run locally

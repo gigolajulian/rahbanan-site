@@ -133,11 +133,23 @@
       <p class="sec__lead">Every shipment gets one file number. Booking, customs, delivery and tracking all sit under it.</p>
     </header>
 
-    <!-- a manifest: one typographic row per mode; a small thumb on phones -->
+    <!-- a manifest: one typographic row per mode, each with its vehicle running in place -->
     <div class="manifest">
       <article class="row">
         <div class="row__id">
-          <img class="row__thumb" src="assets/land.jpg" alt="" loading="lazy" width="900" height="506">
+          <svg class="row__anim" viewBox="0 0 200 100" aria-hidden="true">
+          <path class="m road" d="M6 80H194" stroke-dasharray="16 12"/>
+          <path class="m fast" d="M18 44h16M12 52h20M20 60h12" stroke-dasharray="6 8"/>
+          <g class="body">
+            <rect class="f" x="40" y="34" width="88" height="30" rx="3"/>
+            <path class="g" d="M44 41h80"/>
+            <path class="f" d="M128 64V40h22l16 14v10z"/>
+            <path d="M150 40v14h16"/>
+            <rect class="gf" x="132" y="45" width="12" height="9" rx="1.5"/>
+            <circle class="puff" cx="134" cy="36" r="3"/><circle class="puff p2" cx="134" cy="36" r="3"/>
+          </g>
+          <g transform="translate(58 70)"><g class="wh"><circle r="7"/><path d="M0 -7V7M-7 0H7"/></g></g><g transform="translate(76 70)"><g class="wh"><circle r="7"/><path d="M0 -7V7M-7 0H7"/></g></g><g transform="translate(152 70)"><g class="wh"><circle r="7"/><path d="M0 -7V7M-7 0H7"/></g></g>
+        </svg>
           <p class="row__name">Land</p>
         </div>
         <div class="row__copy">
@@ -155,7 +167,23 @@
       </article>
       <article class="row">
         <div class="row__id">
-          <img class="row__thumb" src="assets/rail.jpg" alt="" loading="lazy" width="900" height="598">
+          <svg class="row__anim" viewBox="0 0 200 100" aria-hidden="true">
+          <path class="m" d="M4 80H196"/>
+          <path class="m rail" d="M4 85H196" stroke-dasharray="3 9"/>
+          <g class="body">
+            <rect class="f" x="112" y="36" width="60" height="30" rx="4"/>
+            <rect class="gf" x="150" y="42" width="14" height="10" rx="1.5"/>
+            <rect x="158" y="24" width="8" height="12" rx="1"/>
+            <path d="M172 60l8 6h-16z"/>
+            <rect class="f" x="70" y="44" width="36" height="22" rx="2"/>
+            <rect class="gf" x="72" y="46" width="32" height="8"/>
+            <rect class="f" x="28" y="44" width="36" height="22" rx="2"/>
+            <rect class="gf" x="30" y="46" width="32" height="8"/>
+            <path d="M64 58h6M106 58h6"/>
+            <circle class="puff" cx="162" cy="22" r="3"/><circle class="puff p2" cx="162" cy="22" r="3"/>
+          </g>
+          <g transform="translate(36 71)"><g class="wh"><circle r="5"/><path d="M0 -5V5M-5 0H5"/></g></g><g transform="translate(56 71)"><g class="wh"><circle r="5"/><path d="M0 -5V5M-5 0H5"/></g></g><g transform="translate(78 71)"><g class="wh"><circle r="5"/><path d="M0 -5V5M-5 0H5"/></g></g><g transform="translate(98 71)"><g class="wh"><circle r="5"/><path d="M0 -5V5M-5 0H5"/></g></g><g transform="translate(122 71)"><g class="wh"><circle r="5"/><path d="M0 -5V5M-5 0H5"/></g></g><g transform="translate(142 71)"><g class="wh"><circle r="5"/><path d="M0 -5V5M-5 0H5"/></g></g><g transform="translate(162 71)"><g class="wh"><circle r="5"/><path d="M0 -5V5M-5 0H5"/></g></g>
+        </svg>
           <p class="row__name">Rail</p>
         </div>
         <div class="row__copy">
@@ -173,7 +201,23 @@
       </article>
       <article class="row">
         <div class="row__id">
-          <img class="row__thumb" src="assets/air.jpg" alt="" loading="lazy" width="900" height="600">
+          <svg class="row__anim" viewBox="0 0 200 100" aria-hidden="true">
+          <g class="cloud">
+            <path class="m" d="M20 30q6-10 16-6q6-8 16-2q10-2 10 8H20z"/>
+            <path class="m" d="M150 76q5-8 13-5q5-6 12-1q8-2 8 6h-33z"/>
+            <path class="m" d="M220 30q6-10 16-6q6-8 16-2q10-2 10 8h-42z"/>
+          </g>
+          <g class="plane">
+            <path class="f" d="M36 52C60 40 140 40 170 50l8 4c-28 8-108 10-138 4z"/>
+            <path d="M54 50L44 30h16l10 19"/>
+            <path class="gf" d="M92 58L78 78h30l-4-20z"/>
+            <rect class="f" x="86" y="70" width="10" height="6" rx="3"/>
+            <path class="m" d="M72 51h68" stroke-dasharray="4 5"/>
+            <path class="g" d="M170 50l8 4"/>
+            <path class="trail" d="M30 56H2" stroke-dasharray="6 7"/>
+            <path class="trail t2" d="M80 79H52" stroke-dasharray="5 7"/>
+          </g>
+        </svg>
           <p class="row__name">Air</p>
         </div>
         <div class="row__copy">
@@ -191,7 +235,22 @@
       </article>
       <article class="row">
         <div class="row__id">
-          <img class="row__thumb" src="assets/sea.jpg" alt="" loading="lazy" width="900" height="1125">
+          <svg class="row__anim" viewBox="0 0 200 100" aria-hidden="true">
+          <path class="bird" d="M22 24q4-4 8 0q4-4 8 0"/>
+          <g class="ship">
+            <path class="f" d="M30 62l14 16h112l16-16z"/>
+            <path class="g" d="M36 67h126"/>
+            <rect class="gf" x="54" y="50" width="18" height="12"/><rect class="f" x="74" y="50" width="18" height="12"/>
+            <rect class="gf" x="94" y="50" width="18" height="12"/><rect class="f" x="114" y="50" width="18" height="12"/>
+            <rect class="f" x="64" y="38" width="18" height="12"/><rect class="gf" x="84" y="38" width="18" height="12"/>
+            <rect class="f" x="104" y="38" width="18" height="12"/>
+            <rect class="f" x="140" y="40" width="18" height="22" rx="1"/>
+            <rect x="146" y="30" width="6" height="10"/>
+            <circle class="puff" cx="149" cy="28" r="3"/>
+          </g>
+          <path class="m wave" d="M-40 82q10-5 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0"/>
+          <path class="m wave w2" d="M-40 90q10-5 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0"/>
+        </svg>
           <p class="row__name">Sea</p>
         </div>
         <div class="row__copy">
