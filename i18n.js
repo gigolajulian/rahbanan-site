@@ -69,6 +69,18 @@ const FA = {
   'We offer worldwide coverage: direct through major shipping lines, and indirect via NVO services — without cross-stuffing of goods, to and from Iranian ports.':
     'پوشش جهانی ارائه می‌دهیم: مستقیم از طریق خطوط کشتیرانی اصلی و غیرمستقیم از طریق سرویس‌های NVO — بدون تخلیه و بارگیری مجدد کالا، از و به بنادر ایران.',
   'No cross-stuffing': 'بدون تخلیهٔ مجدد',
+  'Coverage': 'پوشش', 'Departures': 'حرکت', 'Service': 'سرویس', 'Cargo': 'نوع بار',
+  'Terms': 'شرایط', 'Via': 'از طریق',
+  'Europe → Türkiye → Iran': 'اروپا ← ترکیه ← ایران',
+  'Daily, from seven hubs': 'روزانه، از هفت هاب',
+  'Türkiye → Iran, with a European land bridge': 'ترکیه ← ایران، با پل زمینی اروپا',
+  'Containerised · Conventional': 'کانتینری · متعارف',
+  'Multimodal · Combined': 'چندوجهی · ترکیبی',
+  'All major airports': 'همهٔ فرودگاه‌های اصلی',
+  'Import · Export': 'واردات · صادرات',
+  'Global, to and from Iranian ports': 'جهانی، از و به بنادر ایران',
+  'Direct lines · NVO': 'خطوط مستقیم · NVO',
+  'FCL · LCL, no cross-stuffing': 'FCL · LCL، بدون تخلیهٔ مجدد',
 
   /* ── route finder ── */
   'Route & service finder': 'یافتن مسیر و سرویس',

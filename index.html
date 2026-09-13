@@ -96,51 +96,79 @@
       <p class="sec__lead">Whatever the leg, the paperwork, the customs and the tracking stay in one place — ours.</p>
     </header>
 
-    <!-- each panel sticks under the header and is covered by the next as you
-         scroll — one service per screenful, no hover, no JS -->
-    <div class="svcs">
-      <article class="svc" style="--i:0">
-        <img class="svc__img" src="assets/land.jpg" alt="Curtainsider trailer on a rural trunk road, seen from the air." loading="lazy" width="900" height="506">
-        <span class="svc__n" aria-hidden="true"></span>
-        <div class="svc__in">
-          <p class="svc__k">Land</p>
+    <!-- a manifest: one typographic row per mode; the photo floats under the
+         cursor on desktop and is a small thumb on phones -->
+    <div class="manifest">
+      <article class="row" data-img="assets/land.jpg">
+        <div class="row__id">
+          <img class="row__thumb" src="assets/land.jpg" alt="" loading="lazy" width="900" height="506">
+          <p class="row__name">Land</p>
+        </div>
+        <div class="row__copy">
           <h3>FTL and LTL loads through Europe</h3>
           <p>We cover Europe, with hubs in Dartford, Paris, Lyon, Nürnberg, Vienna, Milan and Istanbul — providing direct LTL services at daily intervals with the shortest transit time.</p>
-          <ul class="tags"><li>FTL</li><li>LTL</li><li>Daily departures</li></ul>
-          <a class="btn btn--gold" href="#quote" data-quote-mode="Land">Get a quote</a>
+        </div>
+        <div class="row__aside">
+          <dl class="row__spec">
+        <div><dt>Coverage</dt><dd>Europe → Türkiye → Iran</dd></div>
+        <div><dt>Departures</dt><dd>Daily, from seven hubs</dd></div>
+        <div><dt>Service</dt><dd>FTL · LTL</dd></div>
+          </dl>
+          <a class="row__cta" href="#quote" data-quote-mode="Land">Get a quote <span aria-hidden="true">→</span></a>
         </div>
       </article>
-      <article class="svc" style="--i:1">
-        <img class="svc__img" src="assets/rail.jpg" alt="Containerised freight train standing in a city rail yard." loading="lazy" width="900" height="598">
-        <span class="svc__n" aria-hidden="true"></span>
-        <div class="svc__in">
-          <p class="svc__k">Rail</p>
+      <article class="row" data-img="assets/rail.jpg">
+        <div class="row__id">
+          <img class="row__thumb" src="assets/rail.jpg" alt="" loading="lazy" width="900" height="598">
+          <p class="row__name">Rail</p>
+        </div>
+        <div class="row__copy">
           <h3>Multimodal land-bridge services</h3>
           <p>We handle rail shipments mainly from Turkey, conventionally and containerised, and also combined multimodal services.</p>
-          <ul class="tags"><li>Containerised</li><li>Conventional</li><li>Land bridge</li></ul>
-          <a class="btn btn--gold" href="#quote" data-quote-mode="Rail">Get a quote</a>
+        </div>
+        <div class="row__aside">
+          <dl class="row__spec">
+        <div><dt>Coverage</dt><dd>Türkiye → Iran, with a European land bridge</dd></div>
+        <div><dt>Cargo</dt><dd>Containerised · Conventional</dd></div>
+        <div><dt>Service</dt><dd>Multimodal · Combined</dd></div>
+          </dl>
+          <a class="row__cta" href="#quote" data-quote-mode="Rail">Get a quote <span aria-hidden="true">→</span></a>
         </div>
       </article>
-      <article class="svc" style="--i:2">
-        <img class="svc__img" src="assets/air.jpg" alt="Freighter aircraft being loaded with palletised cargo on the apron." loading="lazy" width="900" height="600">
-        <span class="svc__n" aria-hidden="true"></span>
-        <div class="svc__in">
-          <p class="svc__k">Air</p>
+      <article class="row" data-img="assets/air.jpg">
+        <div class="row__id">
+          <img class="row__thumb" src="assets/air.jpg" alt="" loading="lazy" width="900" height="600">
+          <p class="row__name">Air</p>
+        </div>
+        <div class="row__copy">
           <h3>Efficient air freight handling</h3>
           <p>Through our extensive network we ship in and out, connecting all major airports, with DDU and DDP services.</p>
-          <ul class="tags"><li>DDU</li><li>DDP</li><li>Airport to door</li></ul>
-          <a class="btn btn--gold" href="#quote" data-quote-mode="Air">Get a quote</a>
+        </div>
+        <div class="row__aside">
+          <dl class="row__spec">
+        <div><dt>Coverage</dt><dd>All major airports</dd></div>
+        <div><dt>Terms</dt><dd>DDU · DDP</dd></div>
+        <div><dt>Service</dt><dd>Import · Export</dd></div>
+          </dl>
+          <a class="row__cta" href="#quote" data-quote-mode="Air">Get a quote <span aria-hidden="true">→</span></a>
         </div>
       </article>
-      <article class="svc" style="--i:3">
-        <img class="svc__img" src="assets/sea.jpg" alt="Fully laden container vessel under way." loading="lazy" width="900" height="1125">
-        <span class="svc__n" aria-hidden="true"></span>
-        <div class="svc__in">
-          <p class="svc__k">Sea</p>
+      <article class="row" data-img="assets/sea.jpg">
+        <div class="row__id">
+          <img class="row__thumb" src="assets/sea.jpg" alt="" loading="lazy" width="900" height="1125">
+          <p class="row__name">Sea</p>
+        </div>
+        <div class="row__copy">
           <h3>FCL and LCL services globally</h3>
           <p>We offer worldwide coverage: direct through major shipping lines, and indirect via NVO services — without cross-stuffing of goods, to and from Iranian ports.</p>
-          <ul class="tags"><li>FCL</li><li>LCL</li><li>No cross-stuffing</li></ul>
-          <a class="btn btn--gold" href="#quote" data-quote-mode="Sea">Get a quote</a>
+        </div>
+        <div class="row__aside">
+          <dl class="row__spec">
+        <div><dt>Coverage</dt><dd>Global, to and from Iranian ports</dd></div>
+        <div><dt>Via</dt><dd>Direct lines · NVO</dd></div>
+        <div><dt>Service</dt><dd>FCL · LCL, no cross-stuffing</dd></div>
+          </dl>
+          <a class="row__cta" href="#quote" data-quote-mode="Sea">Get a quote <span aria-hidden="true">→</span></a>
         </div>
       </article>
     </div>
