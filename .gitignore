@@ -1,0 +1,8 @@
+# editor / tooling
+.claude/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# build source already baked into app.js (LAND_MASK)
+worldmask.txt

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rahbanan — International Transport | Land, Rail, Air &amp; Sea Freight</title>
+<meta name="description" content="Rahbanan International Transport Co. Ltd. — over 40 years of FTL/LTL road freight across Europe, multimodal rail land-bridge, air freight and FCL/LCL sea services to and from Iranian ports.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ───────────────────────── header ───────────────────────── -->
+<header class="hdr" id="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="#top" aria-label="Rahbanan, home">
+      <img src="assets/logo.png" alt="" width="44" height="37">
+      <span class="brand__txt">
+        <strong>RAHBANAN</strong>
+        <small>International Transport</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#network">Network</a>
+      <a href="#finder">Find a route</a>
+      <a href="#track">Track</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn--gold nav__cta" href="#quote">Get a quote</a>
+    </nav>
+
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fa" aria-pressed="false" lang="fa">فارسی</button>
+    </div>
+
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ───────────────────────── hero ───────────────────────── -->
+<section class="hero" id="top">
+  <!-- particle world map, drawn by app.js; decorative, the Network
+       section carries the same information as text -->
+  <canvas class="hero__canvas" id="world" aria-hidden="true"></canvas>
+  <div class="hero__veil" aria-hidden="true"></div>
+
+  <div class="wrap hero__in">
+    <p class="eyebrow hero__eyebrow">Over 40 years · Tehran, Iran</p>
+
+    <h1 class="hero__h1">
+      <span class="w"><span>Transport</span></span>
+      <span class="w"><span>is</span></span>
+      <span class="w"><span><em>art.</em></span></span>
+    </h1>
+
+    <p class="hero__lead">
+      Four decades moving most types of goods through most types of routes.
+      Road, rail, air and sea — from our own European hubs to Iranian ports, and back.
+    </p>
+
+    <div class="hero__cta">
+      <a class="btn btn--gold btn--lg" href="#quote">Get a quote</a>
+      <a class="btn btn--ghost btn--lg" href="#track">Track a shipment</a>
+    </div>
+
+    <p class="hero__hint" aria-hidden="true">Move your cursor across the map</p>
+  </div>
+
+  <div class="hero__foot">
+    <dl class="stats wrap">
+      <div><dt>Years of trade</dt><dd><span data-count="40">0</span>+</dd></div>
+      <div><dt>European hubs</dt><dd><span data-count="7">0</span></dd></div>
+      <div><dt>Transport modes</dt><dd><span data-count="4">0</span></dd></div>
+      <div><dt>Ocean coverage</dt><dd>Global</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ───────────────────────── services ───────────────────────── -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <header class="sec__hd" data-reveal>
+      <p class="eyebrow">Services</p>
+      <h2>Four modes, one file number.</h2>
+      <p class="sec__lead">Whatever the leg, the paperwork, the customs and the tracking stay in one place — ours.</p>
+    </header>
+
+    <div class="cards" data-reveal data-stagger>
+
+      <article class="card">
+        <div class="card__media"><img src="assets/land.jpg" alt="Curtainsider trailer on a rural trunk road, seen from the air." loading="lazy" width="900" height="506"></div>
+        <p class="card__kicker">Land</p>
+        <h3>FTL and LTL loads through Europe</h3>
+        <p>We cover Europe, with hubs in Dartford, Paris, Lyon, Nürnberg, Vienna, Milan and Istanbul — providing direct LTL services at daily intervals with the shortest transit time.</p>
+        <ul class="tags"><li>FTL</li><li>LTL</li><li>Daily departures</li></ul>
+      </article>
+
+      <article class="card">
+        <div class="card__media"><img src="assets/rail.jpg" alt="Containerised freight train standing in a city rail yard." loading="lazy" width="900" height="598"></div>
+        <p class="card__kicker">Rail</p>
+        <h3>Multimodal land-bridge services</h3>
+        <p>We handle rail shipments mainly from Turkey, conventionally and containerised, and also combined multimodal services.</p>
+        <ul class="tags"><li>Containerised</li><li>Conventional</li><li>Land bridge</li></ul>
+      </article>
+
+      <article class="card">
+        <div class="card__media"><img src="assets/air.jpg" alt="Freighter aircraft being loaded with palletised cargo on the apron." loading="lazy" width="900" height="600"></div>
+        <p class="card__kicker">Air</p>
+        <h3>Efficient air freight handling</h3>
+        <p>Through our extensive network we ship in and out, connecting all major airports, with DDU and DDP services.</p>
+        <ul class="tags"><li>DDU</li><li>DDP</li><li>Airport to door</li></ul>
+      </article>
+
+      <article class="card">
+        <div class="card__media"><img src="assets/sea.jpg" alt="Fully laden container vessel under way." loading="lazy" width="900" height="1125"></div>
+        <p class="card__kicker">Sea</p>
+        <h3>FCL and LCL services globally</h3>
+        <p>We offer worldwide coverage: direct through major shipping lines, and indirect via NVO services — without cross-stuffing of goods, to and from Iranian ports.</p>
+        <ul class="tags"><li>FCL</li><li>LCL</li><li>No cross-stuffing</li></ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── route finder ───────────────────────── -->
+<section class="sec sec--alt" id="finder">
+  <div class="wrap">
+    <header class="sec__hd" data-reveal>
+      <p class="eyebrow">Route &amp; service finder</p>
+      <h2>Tell us the lane. We&rsquo;ll tell you the options.</h2>
+      <p class="sec__lead">Pick an origin and a destination to see which of our modes serve it, and roughly how long each takes.</p>
+    </header>
+
+    <div class="finder" data-reveal>
+      <form class="finder__form" id="finderForm" autocomplete="off">
+        <div class="field">
+          <label for="fFrom">Origin</label>
+          <select id="fFrom"></select>
+        </div>
+        <button class="swap" type="button" id="fSwap" aria-label="Swap origin and destination" title="Swap">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v13M7 20l-4-4M7 20l4-4M17 20V7M17 4l4 4M17 4l-4 4"/></svg>
+        </button>
+        <div class="field">
+          <label for="fTo">Destination</label>
+          <select id="fTo"></select>
+        </div>
+        <button class="btn btn--gold" type="submit">Show routes</button>
+      </form>
+
+      <div class="finder__out" id="finderOut" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── network ───────────────────────── -->
+<section class="sec" id="network">
+  <div class="wrap net">
+    <div class="net__copy" data-reveal>
+      <p class="eyebrow">Network</p>
+      <h2>Our own hubs, not a broker&rsquo;s address book.</h2>
+      <p class="sec__lead">
+        Seven European hubs feed one corridor east through Istanbul into Iran — which is why our LTL
+        leaves daily instead of when a trailer happens to fill. The same corridor runs on past Tehran,
+        through Kazakhstan and Ürümqi to Xi&rsquo;an, Shanghai and the East Asian ports.
+      </p>
+      <p class="sec__lead">
+        Head office sits in Tehran, where the customs file, the delivery order and the last mile are
+        handled by the same team that booked the space.
+      </p>
+      <a class="btn btn--ghost" href="#contact">Talk to the Tehran desk</a>
+    </div>
+
+    <ul class="hubs" id="hubs" data-reveal data-stagger></ul>
+  </div>
+</section>
+
+<!-- ───────────────────────── tracking ───────────────────────── -->
+<section class="sec sec--alt" id="track">
+  <div class="wrap">
+    <header class="sec__hd" data-reveal>
+      <p class="eyebrow">Track &amp; trace</p>
+      <h2>Where is it, right now.</h2>
+      <p class="sec__lead">Search by bill of lading, container or truck number, or by our file number.</p>
+    </header>
+
+    <div class="track" data-reveal>
+      <div class="tabs" role="group" aria-label="Search by">
+        <button type="button" aria-pressed="true"  data-mode="bl">BL</button>
+        <button type="button" aria-pressed="false" data-mode="cntr">CNTR / Truck</button>
+        <button type="button" aria-pressed="false" data-mode="file">File no.</button>
+      </div>
+
+      <form class="track__form" id="trackForm" autocomplete="off">
+        <label class="sr" for="trackInput">Reference number</label>
+        <input id="trackInput" name="ref" placeholder="e.g. RB-2026-0412" spellcheck="false" required>
+        <button class="btn btn--gold" type="submit">Track</button>
+      </form>
+
+      <p class="hint">Demo references: <button class="chip" type="button">RB-2026-0412</button>
+        <button class="chip" type="button">MSCU7741208</button>
+        <button class="chip" type="button">34-TR-9910</button></p>
+
+      <div class="track__out" id="trackOut" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── about ───────────────────────── -->
+<section class="sec about" id="about">
+  <div class="wrap about__in">
+    <blockquote data-reveal>
+      <p>&ldquo;We are a business over 40 years, and we have handled most types of goods through various routes.&rdquo;</p>
+      <footer>Rahbanan International Transport Co. Ltd.</footer>
+    </blockquote>
+    <ul class="values" data-reveal data-stagger>
+      <li><h3>Flexible</h3><p>Odd dimensions, odd routings, odd deadlines. Forty years of them.</p></li>
+      <li><h3>Competitive</h3><p>Direct line and airline contracts, plus NVO options where they price better.</p></li>
+      <li><h3>Customer oriented</h3><p>One named contact from booking to delivery order. No handover, no ticket queue.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───────────────────────── quote ───────────────────────── -->
+<section class="sec sec--alt" id="quote">
+  <div class="wrap">
+    <header class="sec__hd" data-reveal>
+      <p class="eyebrow">Get a quote</p>
+      <h2>Receive a quote for your shipment.</h2>
+      <p class="sec__lead">The more you can tell us, the sharper the number. Everything here is optional except contact and route.</p>
+    </header>
+
+    <form class="quote" id="quoteForm" data-reveal>
+      <fieldset>
+        <legend>Contact information</legend>
+        <div class="grid">
+          <div class="field"><label for="qName">Full name *</label><input id="qName" name="Name" required></div>
+          <div class="field"><label for="qCompany">Company</label><input id="qCompany" name="Company"></div>
+          <div class="field"><label for="qEmail">Email *</label><input id="qEmail" name="Email" type="email" required></div>
+          <div class="field"><label for="qPhone">Phone</label><input id="qPhone" name="Phone" type="tel"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Parcel information</legend>
+        <div class="grid">
+          <div class="field"><label for="qFrom">From *</label><input id="qFrom" name="From" required placeholder="City, country"></div>
+          <div class="field"><label for="qTo">To *</label><input id="qTo" name="To" required placeholder="City, country"></div>
+          <div class="field">
+            <label for="qMode">Preferred mode</label>
+            <select id="qMode" name="Mode">
+              <option>No preference</option><option>Land</option><option>Rail</option><option>Air</option><option>Sea</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="qIncoterm">Incoterm</label>
+            <select id="qIncoterm" name="Incoterm">
+              <option>Not sure</option><option>EXW</option><option>FCA</option><option>FOB</option><option>CIF</option><option>DAP</option><option>DDP</option>
+            </select>
+          </div>
+          <div class="field"><label for="qGoods">Commodity</label><input id="qGoods" name="Goods" placeholder="What is it?"></div>
+          <div class="field"><label for="qWeight">Gross weight</label><input id="qWeight" name="Weight" placeholder="kg"></div>
+          <div class="field"><label for="qDims">Dimensions / volume</label><input id="qDims" name="Dimensions" placeholder="L×W×H cm, or m³"></div>
+          <div class="field"><label for="qPkgs">Packages</label><input id="qPkgs" name="Packages" placeholder="Pallets, cartons, units"></div>
+          <div class="field field--full"><label for="qNotes">Anything else</label><textarea id="qNotes" name="Notes" rows="3" placeholder="Ready date, hazardous class, temperature control, deadlines…"></textarea></div>
+        </div>
+      </fieldset>
+
+      <div class="quote__foot">
+        <button class="btn btn--gold btn--lg" type="submit">Send request</button>
+        <p class="hint">Goes to <a href="mailto:tehran@rahbanan.com">tehran@rahbanan.com</a>. We reply within one working day.</p>
+      </div>
+      <p class="formmsg" id="quoteMsg" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ───────────────────────── contact ───────────────────────── -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <header class="sec__hd" data-reveal>
+      <p class="eyebrow">Contact us</p>
+      <h2>Tehran head office.</h2>
+    </header>
+
+    <div class="contact" data-reveal data-stagger>
+      <a class="ccard" href="tel:+982188825902">
+        <span class="ccard__k">Telephone</span>
+        <strong>+98 21 8882 5902</strong>
+        <span class="ccard__m">Sat–Wed, 08:30–17:00 IRST</span>
+      </a>
+      <a class="ccard" href="mailto:tehran@rahbanan.com">
+        <span class="ccard__k">Email</span>
+        <strong>tehran@rahbanan.com</strong>
+        <span class="ccard__m">Quotes, bookings and documents</span>
+      </a>
+      <a class="ccard" href="https://www.google.com/maps/search/?api=1&amp;query=North+Kheradmand+Ave%2C+Karimkhan+Zand+Blvd%2C+Tehran" target="_blank" rel="noopener">
+        <span class="ccard__k">Location</span>
+        <strong>95 North Kheradmand Ave</strong>
+        <span class="ccard__m">Karimkhan Zand Blvd, Tehran, Iran</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ───────────────────────── footer ───────────────────────── -->
+<footer class="ftr">
+  <div class="wrap ftr__in">
+    <div class="ftr__brand">
+      <img src="assets/logo.png" alt="" width="52" height="44">
+      <p><strong>Rahbanan International Transport Co. Ltd.</strong><br>
+      95 North Kheradmand Ave, Karimkhan Zand Blvd, Tehran, Iran</p>
+    </div>
+
+    <nav class="ftr__col" aria-label="Sections">
+      <h4>Company</h4>
+      <a href="#services">Services</a>
+      <a href="#network">Network</a>
+      <a href="#about">About us</a>
+      <a href="#quote">Get a quote</a>
+      <a href="#track">Track shipment</a>
+    </nav>
+
+    <nav class="ftr__col" aria-label="External links">
+      <h4>External links</h4>
+      <a href="http://itair.ir/" target="_blank" rel="noopener">Int&rsquo;l Transport Companies Association of Iran</a>
+      <a href="http://pmo.ir/" target="_blank" rel="noopener">Iran Ports &amp; Maritime Organization</a>
+      <a href="http://saoi.ir/" target="_blank" rel="noopener">Shipping Association of Iran</a>
+      <a href="http://otms.ir/" target="_blank" rel="noopener">Freight forwarder software (OTMS)</a>
+      <a href="https://www.xe.com" target="_blank" rel="noopener">XE live exchange rates</a>
+    </nav>
+  </div>
+  <div class="wrap ftr__base">
+    <p>&copy; <span id="yr">2026</span> Rahbanan International Transport Co. Ltd.</p>
+    <p>Photography: <a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash</a> · Transport is art.</p>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
