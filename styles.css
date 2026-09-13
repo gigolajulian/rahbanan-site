@@ -166,7 +166,8 @@ section[id]{scroll-margin-top:78px}
 
 /* ── services: the manifest ──────────────────────────────────
    Mobile-first. A typographic row per mode, like a departures board:
-   number + huge name, headline + copy, a small spec table, a CTA. */
+   number + huge name, headline + copy, a small spec table, a CTA.
+   Phones get a small thumb beside the name; desktop is type only. */
 .manifest{counter-reset:row;border-top:1px solid var(--line)}
 .row{counter-increment:row;position:relative;display:grid;gap:20px;
   padding:34px 0 36px;border-bottom:1px solid var(--line)}
@@ -197,7 +198,7 @@ html[lang="fa"] .row__name{letter-spacing:0;line-height:1.15}
 [dir="rtl"] .row__cta span{transform:scaleX(-1)}
 [dir="rtl"] .row__cta:hover span{transform:scaleX(-1) translateX(5px)}
 
-/* desktop: three columns; the photo floats under the cursor instead of a thumb */
+/* desktop: three columns, no thumb */
 @media (min-width:900px){
   .row{grid-template-columns:1.1fr 1.7fr 1fr;gap:44px;padding:50px 0 54px;align-items:start}
   .row__thumb{display:none}
@@ -207,16 +208,6 @@ html[lang="fa"] .row__name{letter-spacing:0;line-height:1.15}
     background:rgba(255,255,255,.028);opacity:0;transition:opacity .35s var(--ease)}
   .row:hover::before{opacity:1}
 }
-
-.float{position:fixed;left:0;top:0;z-index:60;width:300px;aspect-ratio:4/3;pointer-events:none;
-  border-radius:14px;overflow:hidden;border:1px solid var(--line-2);
-  box-shadow:0 34px 70px -24px rgba(0,0,0,.85);
-  opacity:0;transform:translate(var(--fx,0),var(--fy,0)) translate(26px,-50%) scale(.9) rotate(-2.5deg);
-  transition:opacity .35s var(--ease),transform .5s var(--ease)}
-.float.is-on{opacity:1;transform:translate(var(--fx,0),var(--fy,0)) translate(26px,-50%) scale(1) rotate(0)}
-[dir="rtl"] .float{transform:translate(var(--fx,0),var(--fy,0)) translate(calc(-100% - 26px),-50%) scale(.9) rotate(2.5deg)}
-[dir="rtl"] .float.is-on{transform:translate(var(--fx,0),var(--fy,0)) translate(calc(-100% - 26px),-50%) scale(1) rotate(0)}
-.float img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05)}
 
 /* ── route finder ─────────────────────────────────────────── */
 .finder{border:1px solid var(--line);border-radius:22px;background:var(--surface);
@@ -420,7 +411,6 @@ option{background:var(--ink-2)}
   [data-reveal]{opacity:1;transform:none}
 }
 
-
 /* ═══ Farsi / RTL ═════════════════════════════════════════
    Layout mirrors on its own (logical properties + flex/grid);
    only these few things need saying explicitly. */
@@ -465,10 +455,8 @@ html[lang="fa"] .hero__h1{letter-spacing:0;font-weight:800}
 html[lang="fa"] #trackInput,html[lang="fa"] .chip,html[lang="fa"] .res__hd h3{
   font-family:var(--sans);direction:ltr;unicode-bidi:isolate}
 
-
 /* ═══ polish ══════════════════════════════════════════════ */
 ::selection{background:var(--gold);color:#0a1626}
-
 
 /* the particle field echoes faintly behind the alternate sections */
 .sec--alt{isolation:isolate}

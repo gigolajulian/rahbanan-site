@@ -600,29 +600,6 @@ function renderShipment(s, ref) {
 
 const esc = str => str.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-/* On pointer devices the row's photo floats under the cursor with a little
-   lag; on touch the inline thumb does the job and none of this runs. */
-if (matchMedia('(hover: hover) and (min-width: 900px)').matches && $('.manifest')) {
-  const fl = document.createElement('div');
-  fl.className = 'float'; fl.innerHTML = '<img alt="">';
-  document.body.appendChild(fl);
-  const img = fl.firstChild;
-  let tx = 0, ty = 0, x = 0, y = 0, on = false, raf = 0;
-  const ease = () => {
-    x += (tx - x) * .16; y += (ty - y) * .16;
-    fl.style.setProperty('--fx', x + 'px'); fl.style.setProperty('--fy', y + 'px');
-    if (on || Math.abs(tx - x) > .5) raf = requestAnimationFrame(ease); else raf = 0;
-  };
-  $('.manifest').addEventListener('pointermove', e => {
-    tx = e.clientX; ty = e.clientY;
-    const row = e.target.closest('.row');
-    if (row && img.getAttribute('src') !== row.dataset.img) { img.src = row.dataset.img; x = tx; y = ty; }
-    on = !!row; fl.classList.toggle('is-on', on);
-    if (!raf) raf = requestAnimationFrame(ease);
-  });
-  $('.manifest').addEventListener('pointerleave', () => { on = false; fl.classList.remove('is-on'); });
-}
-
 /* a service row's CTA arrives at the quote form with its mode chosen */
 document.addEventListener('click', e => {
   const a = e.target.closest('[data-quote-mode]');
