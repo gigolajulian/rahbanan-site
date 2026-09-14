@@ -215,7 +215,7 @@ function worldMap(cv) {
   const isLand = i => (bytes[i >> 3] >> (7 - (i & 7))) & 1;
 
   const RAD = Math.PI / 180;
-  const MAP_SCALE  = 2.64;     // map width as a multiple of the hero width
+  const MAP_SCALE  = 2.20;     // map width as a multiple of the hero width
   const CENTER_LON = 65;       // framing: the corridor centred, Dartford to Busan
   const ANCHOR_LAT = 45;       // the corridor's own latitude: zoom happens about it,
                                // so a bigger map grows outward, not down over the type
@@ -223,7 +223,7 @@ function worldMap(cv) {
   const TILT_LAT   = 16;       // seen slightly from the north
   const FLATTEN    = 0.82;     // 1 = dead flat. Short of 1 keeps real curvature.
   const INTRO_HOLD = 1100;     // a long beat of stillness first, for anticipation
-  const INTRO_MS   = 3400;
+  const INTRO_MS   = 4900;     // the unwrap itself, 1.5s longer than it was
 
   const small = innerWidth < 760;
   const thin = small ? 2 : 1;               // fewer dots on small screens
