@@ -215,8 +215,8 @@ function worldMap(cv) {
   const isLand = i => (bytes[i >> 3] >> (7 - (i & 7))) & 1;
 
   const RAD = Math.PI / 180;
-  const MAP_SCALE  = 2.03;     // map width as a multiple of the hero width
-  const CENTER_LON = 45;       // framing: Atlantic at the left, Pacific at the right
+  const MAP_SCALE  = 2.64;     // map width as a multiple of the hero width
+  const CENTER_LON = 65;       // framing: the corridor centred, Dartford to Busan
   const ANCHOR_LAT = 45;       // the corridor's own latitude: zoom happens about it,
                                // so a bigger map grows outward, not down over the type
   const VIEW_LON   = 60;       // the point on the globe we look straight at
