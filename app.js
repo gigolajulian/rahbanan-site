@@ -215,12 +215,14 @@ function worldMap(cv) {
   const isLand = i => (bytes[i >> 3] >> (7 - (i & 7))) & 1;
 
   const RAD = Math.PI / 180;
-  const MAP_SCALE  = 1.56;     // map width as a multiple of the hero width
+  const MAP_SCALE  = 2.03;     // map width as a multiple of the hero width
   const CENTER_LON = 45;       // framing: Atlantic at the left, Pacific at the right
+  const ANCHOR_LAT = 45;       // the corridor's own latitude: zoom happens about it,
+                               // so a bigger map grows outward, not down over the type
   const VIEW_LON   = 60;       // the point on the globe we look straight at
   const TILT_LAT   = 16;       // seen slightly from the north
   const FLATTEN    = 0.82;     // 1 = dead flat. Short of 1 keeps real curvature.
-  const INTRO_HOLD = 520;      // a beat of stillness first, for anticipation
+  const INTRO_HOLD = 1100;     // a long beat of stillness first, for anticipation
   const INTRO_MS   = 3400;
 
   const small = innerWidth < 760;
@@ -282,7 +284,7 @@ function worldMap(cv) {
 
     mw = W * MAP_SCALE; mh = mw / MAP_ASPECT;
     ox = W * .5 - ((CENTER_LON + 180) / 360) * mw;
-    oy = small ? H * .13 : H * .40 - mh / 2;
+    oy = H * (small ? .196 : .165) - ((LAT_TOP - ANCHOR_LAT) / (LAT_TOP - LAT_BOT)) * mh;
 
     R = mw / (2 * Math.PI);                  // tangent-matched, see sphere()
     const c = flat(VIEW_LON, TILT_LAT); cx = c.x; cy = c.y;
