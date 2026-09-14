@@ -176,36 +176,31 @@ section[id]{scroll-margin-top:78px}
 
 /* the vehicle: inline line art, animated in CSS only, flipped for RTL */
 .row__anim{flex:none;width:118px;height:59px;display:block;color:rgba(233,240,249,.85)}
-.row__anim *{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;
+.row__anim *{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;
   stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .row__anim .f{fill:rgba(255,255,255,.06)}
 .row__anim .g{stroke:var(--gold)}
-.row__anim .gf{fill:rgba(247,238,7,.2);stroke:var(--gold)}
-.row__anim .m{stroke:var(--muted);opacity:.75}
+.row__anim .gf{fill:rgba(247,238,7,.16);stroke:var(--gold)}
+.row__anim .m{stroke:var(--muted);opacity:.7}
+.row__anim .ribs{opacity:.3}
 [dir="rtl"] .row__anim{transform:scaleX(-1)}
 
-.row__anim .road{--d:-28px;animation:dash 1s linear infinite}
-.row__anim .fast{--d:-14px;animation:dash .5s linear infinite}
-.row__anim .rail{--d:-24px;animation:dash 1.1s linear infinite}
-.row__anim .trail{--d:-13px;animation:dash .6s linear infinite}
-.row__anim .t2{--d:-12px}
-.row__anim .wh{transform-origin:0 0;animation:spin 1s linear infinite}
-.row__anim .body{animation:bob 1.3s ease-in-out infinite}
-.row__anim .puff{transform-box:fill-box;transform-origin:center;animation:puff 1.8s ease-out infinite}
-.row__anim .p2{animation-delay:.9s}
-.row__anim .plane{transform-box:fill-box;transform-origin:center;animation:fly 3s ease-in-out infinite}
-.row__anim .cloud{animation:drift 9s linear infinite}
-.row__anim .ship{transform-box:fill-box;transform-origin:center;animation:roll 3.2s ease-in-out infinite}
-.row__anim .wave{animation:wave 2.2s linear infinite}
-.row__anim .w2{animation-duration:3.1s;opacity:.4}
-.row__anim .bird{animation:bob 2.4s ease-in-out infinite}
+/* motion is in the surroundings, not the vehicle: road, sleepers, treads,
+   contrails, sea; the hull and airframe only breathe */
+.row__anim .road{--d:-36px;animation:dash 1.2s linear infinite}
+.row__anim .rail{--d:-20px;animation:dash 1s linear infinite}
+.row__anim .trail{--d:-12px;animation:dash .7s linear infinite}
+.row__anim .wh{transform-origin:0 0;animation:spin 1.1s linear infinite}
+.row__anim .plane{transform-box:fill-box;transform-origin:center;animation:fly 4.5s ease-in-out infinite}
+.row__anim .cirrus{animation:drift 14s linear infinite}
+.row__anim .ship{transform-box:fill-box;transform-origin:center;animation:roll 4.5s ease-in-out infinite}
+.row__anim .wave{animation:wave 2.6s linear infinite}
+.row__anim .w2{animation-duration:3.4s;opacity:.4}
 @keyframes dash{to{stroke-dashoffset:var(--d)}}
 @keyframes spin{to{transform:rotate(360deg)}}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.6px)}}
-@keyframes puff{0%{transform:translate(0,0) scale(.4);opacity:.7}100%{transform:translate(-14px,-18px) scale(1.5);opacity:0}}
-@keyframes fly{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-1.5deg)}}
+@keyframes fly{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-2px) rotate(-.8deg)}}
 @keyframes drift{to{transform:translateX(-200px)}}
-@keyframes roll{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-2px) rotate(1.8deg)}}
+@keyframes roll{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-1.5px) rotate(1deg)}}
 @keyframes wave{to{transform:translateX(-40px)}}
 .row__name{font:800 clamp(44px,12vw,80px)/.92 var(--disp);letter-spacing:-.045em;
   text-transform:uppercase;transition:color .3s var(--ease)}
@@ -427,6 +422,14 @@ option{background:var(--ink-2)}
 }
 @media (max-width:560px){
   .wrap{width:calc(100% - 32px)}
+  /* three language buttons need the room: logo and name shrink, subtitle goes */
+  .hdr__in{gap:12px}
+  .brand{gap:10px;flex:none}
+  .brand img{width:38px}
+  .brand__txt strong{font-size:15px}
+  .brand__txt small{display:none}
+  .lang button{padding:6px 8px;font-size:11.5px}
+  .burger{width:40px;height:40px}
   .sec{padding:78px 0}
   .track__form{flex-direction:column}
   .tabs{display:flex;width:100%}
@@ -444,7 +447,7 @@ option{background:var(--ink-2)}
   [data-reveal]{opacity:1;transform:none}
 }
 
-/* ═══ Farsi / RTL ═════════════════════════════════════════
+/* ═══ Farsi / Chinese / RTL ═══════════════════════════════
    Layout mirrors on its own (logical properties + flex/grid);
    only these few things need saying explicitly. */
 
@@ -456,6 +459,19 @@ option{background:var(--ink-2)}
 .lang button:hover{color:var(--text)}
 .lang button[aria-pressed="true"]{background:var(--gold);color:#0a1626}
 .lang button[lang="fa"]{font-family:"Vazirmatn",var(--sans)}
+.lang button[lang="zh"]{font-family:"Noto Sans SC",var(--sans)}
+
+/* Chinese: one face for everything, no tracking, no word gaps in the headline */
+html[lang="zh"] body{font-family:"Noto Sans SC",var(--sans);line-height:1.8}
+html[lang="zh"] h1,html[lang="zh"] h2,html[lang="zh"] h3,html[lang="zh"] h4,
+html[lang="zh"] .stats dd,html[lang="zh"] .brand__txt strong{
+  font-family:"Noto Sans SC",var(--disp);letter-spacing:0;line-height:1.3}
+html[lang="zh"] .hero__h1{letter-spacing:0;column-gap:0}
+html[lang="zh"] .eyebrow,html[lang="zh"] .row__spec dt,html[lang="zh"] .stats dt,
+html[lang="zh"] .hubs span,html[lang="zh"] .ccard__k,html[lang="zh"] .meta div span,
+html[lang="zh"] .ftr__col h4,html[lang="zh"] .badge,html[lang="zh"] .hero__hint,
+html[lang="zh"] .field label,html[lang="zh"] .quote legend,html[lang="zh"] .brand__txt small{
+  letter-spacing:.08em}
 
 html[lang="fa"] body{font-family:"Vazirmatn",var(--sans);
   /* Persian needs a little more room between lines than Latin */

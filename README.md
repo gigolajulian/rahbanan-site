@@ -8,7 +8,7 @@ Static HTML/CSS/JS. No build step, no framework, no dependencies. Drop the folde
 index.html    markup (English source copy)
 styles.css    design system, RTL rules, animations
 app.js        particle world map, route finder, track & trace, quote form
-i18n.js       English ⇄ Farsi dictionary and runtime
+i18n.js       Farsi and Chinese dictionaries and the runtime
 assets/       logo + one Unsplash photo (About background)
 ```
 
@@ -22,7 +22,7 @@ npx serve .
 
 ## Editing content
 
-- **Copy** — edit the English in `index.html`. Farsi lives in `i18n.js`, keyed by the exact English text; untranslated strings just stay English.
+- **Copy**: edit the English in `index.html`. Farsi and Chinese live in `i18n.js`, keyed by the exact English text; untranslated strings just stay English.
 - **Places, routes, transit bands** — the `PLACES`, `ROUTES` and `LANES` tables at the top of `app.js`. A place's `kind` is `'hub'` (your office; shown on the map *and* in the Network list), `'point'` (map only) or `''` (route-finder only).
 - **Tracking** — `fetchShipment()` in `app.js` is the single backend seam. Point it at the real API and delete the `DEMO` array.
 - **Quote form** — currently composes a `mailto:` to the Tehran desk. Swap for a `POST` when there's somewhere to post to.

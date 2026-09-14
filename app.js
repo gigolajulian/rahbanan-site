@@ -431,22 +431,26 @@ function worldMap(cv) {
                     : own ? 'rgba(150,200,245,.95)' : 'rgba(150,200,245,.6)';
       ctx.fill();
 
-      labels.push({ P, near, hq, own, name: tr(n.label).split(/[,،]/)[0].toUpperCase() });
+      labels.push({ P, near, hq, own, name: tr(n.label).split(/[,،，]/)[0].toUpperCase() });
     }
 
-    /* ── labels: as many as fit without overlapping. Head office and own
-       hubs win ties; a hovered node always gets its name. ── */
-    ctx.font = '600 11px Vazirmatn, Inter, system-ui, sans-serif';
-    const placed = [];
-    const clear = b => !placed.some(o =>
-      b.x < o.x + o.w && b.x + b.w > o.x && b.y < o.y + o.h && b.y + b.h > o.y);
+    /* ── labels: as many as fit without crowding. Head office and own
+       hubs win ties; the head office and a hovered node always get a name. Phones get
+       smaller type and a wider berth, so the dense clusters thin out. ── */
+    const fs = small ? 9 : 11, gap = small ? 9 : 12, pad = small ? 7 : 3;
+    ctx.font = '600 ' + fs + 'px Vazirmatn, "Noto Sans SC", Inter, system-ui, sans-serif';
+    // every marker is an obstacle first, so no name lands on a neighbour's dot
+    const placed = labels.map(l => (l.dot = { x: l.P.x - 4, y: l.P.y - 4, w: 8, h: 8 }));
+    const clear = (b, self) => !placed.some(o => o !== self &&
+      b.x < o.x + o.w + pad && b.x + b.w + pad > o.x &&
+      b.y < o.y + o.h + pad && b.y + b.h + pad > o.y);
     labels.sort((a, b) => (b.near - a.near) || (b.hq - a.hq) || (b.own - a.own));
     for (const l of labels) {
-      const w = ctx.measureText(l.name).width, h = 13;
-      let x = l.P.x + 12, align = 'left', box = { x, y: l.P.y - 7, w, h };
-      if (x + w > W - 6 || !clear(box)) {                 // try the other side
-        x = l.P.x - 12; align = 'right'; box = { x: x - w, y: l.P.y - 7, w, h };
-        if (box.x < 6 || (!clear(box) && !l.near)) continue;
+      const w = ctx.measureText(l.name).width, h = fs + 2, y = l.P.y - h / 2;
+      let x = l.P.x + gap, align = 'left', box = { x, y, w, h };
+      if (x + w > W - 6 || !clear(box, l.dot)) {          // try the other side
+        x = l.P.x - gap; align = 'right'; box = { x: x - w, y, w, h };
+        if (box.x < 6 || (!clear(box, l.dot) && !l.near && !l.hq)) continue;
       }
       placed.push(box);
       ctx.textAlign = align;
@@ -454,7 +458,7 @@ function worldMap(cv) {
                     : l.hq  ? 'rgba(233,240,249,.88)'
                     : l.own ? 'rgba(233,240,249,.62)'
                     :         'rgba(180,200,225,.46)';
-      ctx.fillText(l.name, x, l.P.y + 4);
+      ctx.fillText(l.name, x, l.P.y + fs * .36);
     }
     ctx.globalAlpha = 1;
   }
@@ -486,7 +490,7 @@ if (cv) worldMap(cv);
 /* hub list under the network section */
 function drawHubs() {
   $('#hubs').innerHTML = PLACES.filter(p => p.kind === 'hub').map(p => {
-    const [city, country] = tr(p.label).split(/[,،]\s*/);
+    const [city, country] = tr(p.label).split(/[,،，]\s*/);
     const hq = p.id === 'tehran';
     return `<li class="${hq ? 'is-hq' : ''}"><strong>${city}</strong>` +
            `<span>${hq ? tr('Head office') : country}</span></li>`;
