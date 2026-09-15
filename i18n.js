@@ -29,7 +29,7 @@ const FA = {
   'Get a quote': 'دریافت نرخ',
 
   /* ── hero ── */
-  'Over 40 years · Tehran, Iran': 'بیش از ۴۰ سال · تهران، ایران',
+  'Over 40 years · Global · Office in Tehran': 'بیش از ۴۰ سال · جهانی · دفتر در تهران',
   'Transport': 'حمل‌ونقل',
   'is': 'است',
   'art.': 'هنر',
@@ -307,7 +307,7 @@ const ZH = {
   'Get a quote': '获取报价',
 
   /* ── hero ── */
-  'Over 40 years · Tehran, Iran': '四十余年 · 伊朗德黑兰',
+  'Over 40 years · Global · Office in Tehran': '四十余年 · 全球服务 · 德黑兰办公室',
   'Transport': '运输',
   'is': '是',
   'art.': '艺术。',
