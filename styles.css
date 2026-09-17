@@ -20,7 +20,7 @@
   --wrap:1200px;
   --ease:cubic-bezier(.22,.61,.36,1);
   --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --disp:"Archivo","Inter",system-ui,sans-serif;
+  --disp:"Schibsted Grotesk","Inter",system-ui,sans-serif;
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -33,7 +33,7 @@ body{
 }
 img{max-width:100%;display:block}
 a{color:inherit}
-h1,h2,h3,h4{font-family:var(--disp);line-height:1.1;margin:0;letter-spacing:-.03em}
+h1,h2,h3,h4{font-family:var(--disp);line-height:1.1;margin:0;letter-spacing:-.022em}
 p{margin:0}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
 
@@ -117,7 +117,7 @@ body.nav-open .burger span:nth-child(3){transform:translateY(-5px) rotate(-45deg
 
 .hero__eyebrow{justify-content:center}
 
-.hero__h1{font-size:clamp(40px,7.8vw,116px);font-weight:700;letter-spacing:-.045em;
+.hero__h1{font-size:clamp(40px,7.8vw,116px);font-weight:700;letter-spacing:-.032em;
   max-width:16ch;display:flex;flex-wrap:wrap;justify-content:center;
   align-items:baseline;column-gap:.26em}
 .hero__h1 em{font-style:normal;color:var(--gold)}
