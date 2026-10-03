@@ -92,7 +92,7 @@ p{margin:0}
 .nav__cta{color:#0a1626 !important;margin-inline-start:8px}
 .nav__cta:hover{color:#0a1626 !important}
 
-.burger{display:none;width:44px;height:44px;border:1px solid var(--line-2);background:none;
+.burger{display:none;flex:none;width:44px;height:44px;border:1px solid var(--line-2);background:none;
   border-radius:12px;cursor:pointer;padding:0;place-items:center}
 .burger span{display:block;width:18px;height:2px;background:var(--text);margin:3px auto;
   transition:transform .3s var(--ease),opacity .2s}
@@ -247,7 +247,7 @@ html[lang="fa"] .row__name{letter-spacing:0;line-height:1.15}
   width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--line-2);
   background:rgba(4,16,31,.65);color:var(--text);font:500 15px var(--sans);
   transition:border-color .2s,background .2s}
-.field input::placeholder,.field textarea::placeholder{color:#5d738f}
+.field input::placeholder,.field textarea::placeholder{color:#7b91ad}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue-2);background:rgba(4,16,31,.9)}
 .field textarea{resize:vertical;font-family:var(--sans)}
 select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath fill='%2393a9c6' d='M6 8 0 0h12z'/%3E%3C/svg%3E");
@@ -269,11 +269,12 @@ option{background:var(--ink-2)}
 .modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;
   list-style:none;padding:0;margin:0}
 .mode{border:1px solid var(--line);border-radius:14px;padding:17px;background:rgba(4,16,31,.5)}
-.mode.off{opacity:.42}
+.mode.off{border-color:rgba(255,255,255,.06);background:rgba(4,16,31,.3)}
+.mode.off .mode__t h4{color:var(--muted)}
 .mode__t{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}
 .mode__t h4{font-size:15px;letter-spacing:.02em}
 .mode__d{font:700 22px/1 var(--disp);color:var(--gold);margin-bottom:5px}
-.mode.off .mode__d{color:var(--muted);font-size:15px}
+.mode.off .mode__d{color:var(--muted);font-size:15px;font-weight:600}
 .mode p{font-size:13px;color:var(--muted)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex:none}
 .mode.off .dot{background:#42586f}
@@ -339,9 +340,8 @@ option{background:var(--ink-2)}
 
 /* ── about ────────────────────────────────────────────────── */
 .about{overflow:hidden}
-.about::before{content:"";position:absolute;inset:0;z-index:0;
-  background:url("assets/yard.jpg") center/cover no-repeat fixed;
-  filter:saturate(.35) brightness(.5)}
+.about__bg{position:absolute;inset:0;z-index:0;width:100%;height:100%;
+  object-fit:cover;filter:saturate(.35) brightness(.5)}
 .about::after{content:"";position:absolute;inset:0;z-index:0;
   background:linear-gradient(180deg,var(--ink),rgba(4,16,31,.86) 30% 70%,var(--ink))}
 .about__in{position:relative;z-index:1;
@@ -403,8 +403,11 @@ option{background:var(--ink-2)}
   .burger{display:grid}
   .nav{position:fixed;inset:76px 0 auto;flex-direction:column;align-items:stretch;gap:2px;
     background:rgba(4,16,31,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);
-    padding:18px 24px 26px;transform:translateY(-140%);transition:transform .4s var(--ease)}
-  body.nav-open .nav{transform:none}
+    padding:18px 24px 26px;transform:translateY(-140%);
+    /* visibility keeps the closed menu out of the tab order, and delaying it
+       until the slide finishes lets the close animation still play */
+    visibility:hidden;transition:transform .4s var(--ease),visibility 0s .4s}
+  body.nav-open .nav{transform:none;visibility:visible;transition-delay:0s}
   body.nav-open{overflow:hidden}
   .nav a{padding:14px 4px;font-size:17px;border-radius:10px}
   .nav__cta{margin:10px 0 0;justify-content:center;padding:14px}
@@ -436,15 +439,18 @@ option{background:var(--ink-2)}
   .tabs button{flex:1;padding:10px 6px;font-size:13px}
   .ftr__in{grid-template-columns:1fr}
   .hubs{grid-template-columns:1fr}
-  /* fixed attachment stutters or breaks on mobile Safari */
-  .about::before{background-attachment:scroll}
 }
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;
-    transition-duration:.01ms !important}
+  /* ambient and looping motion stops; animations that end in the visible
+     state still resolve, so nothing is left mid-reveal */
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important}
   [data-reveal]{opacity:1;transform:none}
+  /* hover and press feedback survives as colour, never as movement */
+  *,*::before,*::after{transition-duration:.12s !important}
+  .btn:hover,.ccard:hover,.hubs.in li:hover{transform:none}
+  .row__cta:hover span,.swap:active{transform:none}
 }
 
 /* ═══ Farsi / Chinese / RTL ═══════════════════════════════
