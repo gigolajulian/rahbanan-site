@@ -24,8 +24,7 @@ const PLACES = [
            ''      = selectable in the route finder only                  */
   // id            label                        region kind      lat     lon
   ['dartford',    'Dartford, United Kingdom',   'EU', 'hub',   51.44,   0.22],
-  ['paris',       'Paris, France',              'EU', 'hub',   48.86,   2.35],
-  ['lyon',        'Lyon, France',               'EU', 'hub',   45.76,   4.84],
+  ['sofia',       'Sofia, Bulgaria',            'EU', 'hub',   42.70,  23.32],
   ['nurnberg',    'Nürnberg, Germany',          'EU', 'hub',   49.45,  11.08],
   ['milan',       'Milan, Italy',               'EU', 'hub',   45.46,   9.19],
   ['vienna',      'Vienna, Austria',            'EU', 'hub',   48.21,  16.37],
@@ -33,10 +32,13 @@ const PLACES = [
   ['tehran',      'Tehran, Iran',               'IR', 'hub',   35.69,  51.39],
   ['bandarabbas', 'Bandar Abbas, Iran',         'IR', 'point', 27.18,  56.28],
   ['bik',         'Bandar Imam Khomeini, Iran', 'IR', '',      30.43,  49.08],
+  ['jebelali',    'Jebel Ali, UAE',             'WW', 'point', 25.01,  55.06],
+  ['nhavasheva',  'Nhava Sheva, India',         'WW', 'point', 18.95,  72.95],
 
   /* Eastward extension. ponytail: these are corridor nodes, not offices —
      confirm the routing before launch, then promote any real ones to 'hub'. */
   ['almaty',      'Almaty, Kazakhstan',         'AS', 'point', 43.24,  76.89],
+  ['khorgos',     'Khorgos, Kazakhstan',        'AS', 'point', 44.20,  80.42],
   ['urumqi',      'Ürümqi, China',              'AS', 'point', 43.83,  87.62],
   ['xian',        "Xi'an, China",               'AS', 'point', 34.34, 108.94],
   ['shanghai',    'Shanghai, China',            'AS', 'point', 31.23, 121.47],
@@ -202,11 +204,13 @@ const LAND_MASK = 'AAAAADAAHwf////AAAwAAAAAAA4AAAAAAAAAAAAPjX8AD///AAAAAAAMAAf/4
 
 /* Ordered west to east so the intro draws the corridor in that direction. */
 const ROUTES = [
-  ['dartford', 'paris'], ['paris', 'lyon'], ['lyon', 'milan'],
-  ['paris', 'nurnberg'], ['nurnberg', 'vienna'], ['milan', 'vienna'],
-  ['vienna', 'istanbul'], ['istanbul', 'tehran'], ['tehran', 'bandarabbas'],
-  ['tehran', 'almaty'], ['almaty', 'urumqi'], ['urumqi', 'xian'],
-  ['xian', 'shanghai'], ['shanghai', 'busan'], ['shanghai', 'shenzhen'],
+  ['dartford', 'nurnberg'], ['nurnberg', 'milan'], ['nurnberg', 'vienna'],
+  ['milan', 'vienna'], ['vienna', 'sofia'], ['sofia', 'istanbul'],
+  ['istanbul', 'tehran'], ['tehran', 'bandarabbas'],
+  ['bandarabbas', 'jebelali'], ['jebelali', 'nhavasheva'],
+  ['tehran', 'almaty'], ['almaty', 'khorgos'], ['khorgos', 'urumqi'],
+  ['urumqi', 'xian'], ['xian', 'shanghai'], ['shanghai', 'busan'],
+  ['shanghai', 'shenzhen'],
 ];
 
 function worldMap(cv) {

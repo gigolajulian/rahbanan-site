@@ -113,9 +113,7 @@ body.nav-open .burger span:nth-child(3){transform:translateY(-5px) rotate(-45deg
   linear-gradient(180deg,var(--ink) 0,rgba(4,16,31,0) 22%,rgba(4,16,31,0) 58%,var(--ink) 97%)}
 
 .hero__in{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;text-align:center;padding:48px 0 56px}
-
-.hero__eyebrow{justify-content:center}
+  align-items:center;justify-content:center;text-align:center;padding:124px 0 56px}
 
 .hero__h1{font-size:clamp(40px,7.8vw,116px);font-weight:700;letter-spacing:-.032em;
   max-width:16ch;display:flex;flex-wrap:wrap;justify-content:center;
@@ -138,8 +136,7 @@ body.nav-open .burger span:nth-child(3){transform:translateY(-5px) rotate(-45deg
 @media (hover:none){.hero__hint{display:none}}
 
 /* fade the copy in behind the words */
-.ready .hero__eyebrow,.ready .hero__lead,.ready .hero__cta{animation:fadeUp .8s var(--ease) backwards}
-.ready .hero__eyebrow{animation-delay:.05s}
+.ready .hero__lead,.ready .hero__cta{animation:fadeUp .8s var(--ease) backwards}
 .ready .hero__lead{animation-delay:.45s}
 .ready .hero__cta{animation-delay:.58s}
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}}
@@ -338,23 +335,6 @@ option{background:var(--ink-2)}
 .empty strong{display:block;margin-bottom:6px;font-size:17px;font-family:var(--disp)}
 .empty p{color:var(--muted);font-size:14px}
 
-/* ── about ────────────────────────────────────────────────── */
-.about{overflow:hidden}
-.about__bg{position:absolute;inset:0;z-index:0;width:100%;height:100%;
-  object-fit:cover;filter:saturate(.35) brightness(.5)}
-.about::after{content:"";position:absolute;inset:0;z-index:0;
-  background:linear-gradient(180deg,var(--ink),rgba(4,16,31,.86) 30% 70%,var(--ink))}
-.about__in{position:relative;z-index:1;
-  display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
-.about blockquote{margin:0;border-inline-start:3px solid var(--gold);padding-inline-start:28px}
-.about blockquote p{font:600 clamp(24px,3vw,36px)/1.3 var(--disp);letter-spacing:-.02em}
-.about blockquote footer{margin-top:18px;font-size:13px;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--muted)}
-.values{list-style:none;margin:0;padding:0;display:grid;gap:18px}
-.values li{border-top:1px solid var(--line);padding-top:18px}
-.values h3{font-size:18px;margin-bottom:7px;color:var(--gold)}
-.values p{color:var(--muted);font-size:14.8px}
-
 /* ── quote form ───────────────────────────────────────────── */
 .quote{border:1px solid var(--line);border-radius:22px;background:var(--surface);padding:30px}
 .quote fieldset{border:0;margin:0 0 30px;padding:0}
@@ -395,7 +375,7 @@ option{background:var(--ink-2)}
 
 /* ═══ responsive ══════════════════════════════════════════ */
 @media (max-width:1000px){
-  .net,.about__in{grid-template-columns:1fr;gap:48px}
+  .net{grid-template-columns:1fr;gap:48px}
   .ftr__in{grid-template-columns:1fr 1fr;gap:36px}
   .ftr__brand{grid-column:1/-1}
 }

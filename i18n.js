@@ -29,12 +29,10 @@ const FA = {
   'Get a quote': 'دریافت نرخ',
 
   /* ── hero ── */
-  'Over 40 years · Global · Based in Tehran': 'بیش از ۴۰ سال · جهانی · مستقر در تهران',
   'Transport': 'حمل‌ونقل',
   'is': 'است',
   'art.': 'هنر',
-  'A Tehran freight forwarder. For over forty years we have moved goods between Europe and Iran by road, rail, air and sea, through our own hubs from Dartford to Istanbul.':
-    'شرکت فورواردری در تهران. بیش از چهل سال است که کالا را میان اروپا و ایران از راه جاده، ریل، هوا و دریا جابه‌جا می‌کنیم؛ از طریق هاب‌های خودمان از دارتفورد تا استانبول.',
+  'Over 50 years of excellency.': 'بیش از ۵۰ سال سرآمدی.',
   'Track a shipment': 'رهگیری محموله',
   'Move your cursor across the map': 'نشانگر را روی نقشه حرکت دهید',
   'Years of trade': 'سال فعالیت',
@@ -49,44 +47,44 @@ const FA = {
     'هر محموله یک شماره پرونده می‌گیرد. رزرو، گمرک، تحویل و رهگیری همه زیر همان شماره است.',
   'Land': 'زمینی',
   'FTL and LTL loads through Europe': 'بارهای FTL و LTL در سراسر اروپا',
-  'We cover Europe, with hubs in Dartford, Paris, Lyon, Nürnberg, Vienna, Milan and Istanbul, providing direct LTL services at daily intervals with the shortest transit time.':
-    'سراسر اروپا را با هاب‌هایی در دارتفورد، پاریس، لیون، نورنبرگ، وین، میلان و استانبول پوشش می‌دهیم، با سرویس مستقیم LTL در فواصل روزانه و کوتاه‌ترین زمان حمل.',
+  'We cover Europe, with hubs in Dartford, Sofia, Nürnberg, Vienna, Milan and Istanbul, with full coverage of European countries, China and the CIS, providing FTL and LTL services as well as multimodal services.':
+    'سراسر اروپا را با هاب‌هایی در دارتفورد، صوفیه، نورنبرگ، وین، میلان و استانبول پوشش می‌دهیم، با پوشش کامل کشورهای اروپایی، چین و کشورهای مشترک‌المنافع، و ارائهٔ سرویس‌های FTL و LTL و نیز سرویس‌های چندوجهی.',
   'Daily departures': 'حرکت روزانه',
   'Rail': 'ریلی',
   'Multimodal land-bridge services': 'سرویس‌های پل زمینی چندوجهی',
-  'We handle rail shipments mainly from Turkey, conventionally and containerised, and also combined multimodal services.':
-    'حمل ریلی را عمدتاً از ترکیه، به‌صورت متعارف و کانتینری، و نیز سرویس‌های ترکیبی چندوجهی انجام می‌دهیم.',
+  'We handle rail shipments mainly from Turkey and China, conventionally and containerised, and also combined multimodal services.':
+    'حمل ریلی را عمدتاً از ترکیه و چین، به‌صورت متعارف و کانتینری، و نیز سرویس‌های ترکیبی چندوجهی انجام می‌دهیم.',
   'Containerised': 'کانتینری',
   'Conventional': 'متعارف',
   'Land bridge': 'پل زمینی',
   'Air': 'هوایی',
-  'Efficient air freight handling': 'حمل هوایی سریع و کارآمد',
-  'Through our extensive network we ship in and out, connecting all major airports, with DDU and DDP services.':
-    'از طریق شبکهٔ گستردهٔ خود، واردات و صادرات را با اتصال به همهٔ فرودگاه‌های اصلی و با سرویس‌های DDU و DDP انجام می‌دهیم.',
+  'Reliable air freight handling': 'حمل هوایی مطمئن',
+  'Through our extensive network we ship in and out, connecting all major airports, with DDU, DDP and DAP terms, including express air freight services.':
+    'از طریق شبکهٔ گستردهٔ خود، واردات و صادرات را با اتصال به همهٔ فرودگاه‌های اصلی و با شرایط DDU، DDP و DAP، از جمله سرویس‌های هوایی اکسپرس، انجام می‌دهیم.',
   'Airport to door': 'فرودگاه تا درب',
   'Sea': 'دریایی',
-  'FCL and LCL services globally': 'سرویس‌های FCL و LCL در سراسر جهان',
-  'We offer worldwide coverage: direct through major shipping lines, and indirect via NVO services, without cross-stuffing of goods, to and from Iranian ports.':
-    'پوشش جهانی ارائه می‌دهیم: مستقیم از طریق خطوط کشتیرانی اصلی و غیرمستقیم از طریق سرویس‌های NVO، بدون تخلیه و بارگیری مجدد کالا، از و به بنادر ایران.',
+  'FCL and LCL services': 'سرویس‌های FCL و LCL',
+  'We offer worldwide coverage: direct through major shipping lines, and indirect via NVO services, to and from Iranian ports.':
+    'پوشش جهانی ارائه می‌دهیم: مستقیم از طریق خطوط کشتیرانی اصلی و غیرمستقیم از طریق سرویس‌های NVO، از و به بنادر ایران.',
   'No cross-stuffing': 'بدون تخلیهٔ مجدد',
   'Coverage': 'پوشش', 'Departures': 'حرکت', 'Service': 'سرویس', 'Cargo': 'نوع بار',
   'Terms': 'شرایط', 'Via': 'از طریق',
-  'Europe → Türkiye → Iran': 'اروپا ← ترکیه ← ایران',
-  'Daily, from seven hubs': 'روزانه، از هفت هاب',
-  'Türkiye → Iran, with a European land bridge': 'ترکیه ← ایران، با پل زمینی اروپا',
+  'Europe · Türkiye · China · CIS → Iran': 'اروپا · ترکیه · چین · کشورهای مشترک‌المنافع ← ایران',
+  'Weekly': 'هفتگی',
+  'FTL · LTL · Reefer & DG': 'FTL · LTL · یخچالی و کالای خطرناک',
+  'Türkiye · China → Iran': 'ترکیه · چین ← ایران',
   'Containerised · Conventional': 'کانتینری · متعارف',
   'Multimodal · Combined': 'چندوجهی · ترکیبی',
   'All major airports': 'همهٔ فرودگاه‌های اصلی',
-  'Import · Export': 'واردات · صادرات',
   'Global, to and from Iranian ports': 'جهانی، از و به بنادر ایران',
+  'DDU · DDP · DAP': 'DDU · DDP · DAP',
+  'Import · Export · Reefer & DG': 'واردات · صادرات · یخچالی و کالای خطرناک',
   'Direct lines · NVO': 'خطوط مستقیم · NVO',
-  'FCL · LCL, no cross-stuffing': 'FCL · LCL، بدون تخلیهٔ مجدد',
+  'FCL · LCL · Reefer & DG': 'FCL · LCL · یخچالی و کالای خطرناک',
 
   /* ── route finder ── */
   'Route & service finder': 'یافتن مسیر و سرویس',
-  'Tell us the lane. We’ll tell you the options.': 'مسیر را بگویید، گزینه‌ها را بگوییم.',
-  'Pick an origin and a destination to see which of our modes serve it, and roughly how long each takes.':
-    'مبدأ و مقصد را انتخاب کنید تا ببینید کدام شیوه‌های حمل آن مسیر را پوشش می‌دهند و هر کدام تقریباً چقدر طول می‌کشد.',
+  'Your requirement.': 'نیاز شما.',
   'Origin': 'مبدأ',
   'Destination': 'مقصد',
   'Show routes': 'نمایش مسیرها',
@@ -138,10 +136,10 @@ const FA = {
   /* ── network ── */
   'Our own hubs.':
     'هاب‌های خودمان.',
-  'Seven hubs in Europe consolidate cargo for the corridor through Istanbul into Iran. LTL leaves each hub daily. East of Tehran the corridor continues through Kazakhstan and Ürümqi to Xi’an, Shanghai and the East Asian ports.':
-    'هفت هاب در اروپا بار را برای کریدور استانبول به ایران تجمیع می‌کنند. LTL هر روز از هر هاب حرکت می‌کند. در شرق تهران، کریدور از قزاقستان و ارومچی تا شی‌آن، شانگهای و بنادر شرق آسیا ادامه دارد.',
-  'Head office is in Tehran. The team that books the space also handles customs, the delivery order and final delivery.':
-    'دفتر مرکزی در تهران است. همان تیمی که فضا را رزرو می‌کند، گمرک، ترخیصیه و تحویل نهایی را هم انجام می‌دهد.',
+  'Six hubs in Europe consolidate cargo for the corridor through Istanbul into Iran. LTL leaves each hub weekly.':
+    'شش هاب در اروپا بار را برای کریدور از استانبول به ایران تجمیع می‌کنند. حمل LTL هفتگی از هر هاب حرکت می‌کند.',
+  'Head office is in Tehran. The team that books the space also handles customs, the delivery order, final delivery and all kinds of customer requirement.':
+    'دفتر مرکزی در تهران است. تیمی که جا رزرو می‌کند، گمرک، ترخیصیه، تحویل نهایی و هر نوع نیاز مشتری را هم انجام می‌دهد.',
   'Talk to the Tehran desk': 'تماس با دفتر تهران',
   'Head office': 'دفتر مرکزی',
 
@@ -196,24 +194,12 @@ const FA = {
   'Estimated today': 'تخمینی، امروز',
   'Proof of delivery to follow.': 'رسید تحویل متعاقباً ارسال می‌شود.',
 
-  /* ── about ── */
-  '“We are a business over 40 years, and we have handled most types of goods through various routes.”':
-    '«ما کسب‌وکاری با بیش از ۴۰ سال سابقه هستیم و بیشتر انواع کالا را از مسیرهای گوناگون جابه‌جا کرده‌ایم.»',
   'Rahbanan International Transport Co. Ltd.': 'شرکت حمل‌ونقل بین‌المللی رهبانان (مسئولیت محدود)',
-  'Flexible': 'انعطاف‌پذیر',
-  'Out-of-gauge cargo, unusual routings, tight deadlines.':
-    'بار خارج از ابعاد، مسیرهای غیرمعمول، مهلت‌های فشرده.',
-  'Competitive': 'رقابتی',
-  'Direct line and airline contracts, plus NVO options where they price better.':
-    'قرارداد مستقیم با خطوط کشتیرانی و هواپیمایی، به‌علاوهٔ گزینه‌های NVO هر جا که نرخ بهتری داشته باشند.',
-  'Customer oriented': 'مشتری‌مدار',
-  'One named contact from booking to delivery order.':
-    'یک نفر مشخص از رزرو تا صدور ترخیصیه.',
 
   /* ── quote form ── */
   'Receive a quote for your shipment.': 'برای محمولهٔ خود نرخ بگیرید.',
-  'Contact details and route are required. Everything else helps us price it accurately.':
-    'اطلاعات تماس و مسیر الزامی است. بقیهٔ موارد به قیمت‌گذاری دقیق‌تر کمک می‌کند.',
+  'Contact details and route are required. Everything else helps us quote it accurately.':
+    'اطلاعات تماس و مسیر الزامی است. بقیهٔ موارد به ما کمک می‌کند دقیق‌تر نرخ بدهیم.',
   'Contact information': 'اطلاعات تماس',
   'Full name *': 'نام و نام خانوادگی *',
   'Company': 'شرکت',
@@ -237,8 +223,6 @@ const FA = {
   'Ready date, hazardous class, temperature control, deadlines…':
     'تاریخ آمادگی بار، کلاس خطر، کنترل دما، مهلت‌ها…',
   'Send request': 'ارسال درخواست',
-  'Goes to': 'ارسال به',
-  '. We reply within one working day.': '. ظرف یک روز کاری پاسخ می‌دهیم.',
   'Your email client should now be open with the request filled in. Just press send. If nothing happened, mail us at tehran@rahbanan.com.':
     'برنامهٔ ایمیل شما باید با درخواست تکمیل‌شده باز شده باشد. کافی است ارسال را بزنید. اگر باز نشد، به tehran@rahbanan.com ایمیل بزنید.',
 
@@ -248,13 +232,11 @@ const FA = {
   'Telephone': 'تلفن',
   'Iran Standard Time, UTC+3:30': 'به وقت رسمی ایران، UTC+۳:۳۰',
   'Email': 'ایمیل',
-  'Quotes, bookings and documents': 'نرخ، رزرو و مدارک',
   'Location': 'نشانی',
   '95 North Kheradmand Ave': 'خیابان خردمند شمالی، پلاک ۹۵',
   'Karimkhan Zand Blvd, Tehran, Iran': 'بلوار کریم‌خان زند، تهران، ایران',
   '95 North Kheradmand Ave, Karimkhan Zand Blvd, Tehran, Iran':
     'تهران، بلوار کریم‌خان زند، خیابان خردمند شمالی، پلاک ۹۵',
-  'About us': 'دربارهٔ ما',
   'Track shipment': 'رهگیری محموله',
   'External links': 'پیوندهای بیرونی',
   'Int’l Transport Companies Association of Iran': 'انجمن شرکت‌های حمل‌ونقل بین‌المللی ایران',
@@ -267,13 +249,15 @@ const FA = {
 
   /* ── places (also used for the labels drawn on the map) ── */
   'Dartford, United Kingdom': 'دارتفورد، بریتانیا',
-  'Paris, France': 'پاریس، فرانسه',
-  'Lyon, France': 'لیون، فرانسه',
+  'Sofia, Bulgaria': 'صوفیه، بلغارستان',
   'Nürnberg, Germany': 'نورنبرگ، آلمان',
   'Milan, Italy': 'میلان، ایتالیا',
   'Vienna, Austria': 'وین، اتریش',
   'Istanbul, Türkiye': 'استانبول، ترکیه',
   'Tehran, Iran': 'تهران، ایران',
+  'Jebel Ali, UAE': 'جبل‌علی، امارات',
+  'Nhava Sheva, India': 'نهاوا شوا، هند',
+  'Khorgos, Kazakhstan': 'خورگوس، قزاقستان',
   'Bandar Abbas, Iran': 'بندرعباس، ایران',
   'Bandar Imam Khomeini, Iran': 'بندر امام خمینی، ایران',
   'Almaty, Kazakhstan': 'آلماتی، قزاقستان',
@@ -307,12 +291,10 @@ const ZH = {
   'Get a quote': '获取报价',
 
   /* ── hero ── */
-  'Over 40 years · Global · Based in Tehran': '四十余年 · 全球服务 · 总部设于德黑兰',
   'Transport': '运输',
   'is': '是',
   'art.': '艺术。',
-  'A Tehran freight forwarder. For over forty years we have moved goods between Europe and Iran by road, rail, air and sea, through our own hubs from Dartford to Istanbul.':
-    '德黑兰货运代理公司。四十多年来，我们通过公路、铁路、航空和海运，经由从达特福德到伊斯坦布尔的自有枢纽，在欧洲与伊朗之间运送货物。',
+  'Over 50 years of excellency.': '五十余年卓越服务。',
   'Track a shipment': '追踪货物',
   'Move your cursor across the map': '在地图上移动光标',
   'Years of trade': '经营年限',
@@ -327,44 +309,44 @@ const ZH = {
     '每批货物只有一个档案号。订舱、清关、交付和追踪都在这个号码之下。',
   'Land': '陆运',
   'FTL and LTL loads through Europe': '欧洲全境的整车与零担运输',
-  'We cover Europe, with hubs in Dartford, Paris, Lyon, Nürnberg, Vienna, Milan and Istanbul, providing direct LTL services at daily intervals with the shortest transit time.':
-    '我们覆盖整个欧洲，在达特福德、巴黎、里昂、纽伦堡、维也纳、米兰和伊斯坦布尔设有枢纽，提供每日发运的直达零担服务，运输时间最短。',
+  'We cover Europe, with hubs in Dartford, Sofia, Nürnberg, Vienna, Milan and Istanbul, with full coverage of European countries, China and the CIS, providing FTL and LTL services as well as multimodal services.':
+    '我们覆盖欧洲，在达特福德、索非亚、纽伦堡、维也纳、米兰和伊斯坦布尔设有枢纽，全面覆盖欧洲各国、中国与独联体国家，提供整车与零担服务以及多式联运服务。',
   'Daily departures': '每日发运',
   'Rail': '铁路',
   'Multimodal land-bridge services': '多式联运陆桥服务',
-  'We handle rail shipments mainly from Turkey, conventionally and containerised, and also combined multimodal services.':
-    '我们主要承接从土耳其出发的铁路运输，包括散货和集装箱，以及多式联运组合服务。',
+  'We handle rail shipments mainly from Turkey and China, conventionally and containerised, and also combined multimodal services.':
+    '我们主要承办来自土耳其和中国的铁路运输，包括散货与集装箱，以及多式联运组合服务。',
   'Containerised': '集装箱',
   'Conventional': '散货',
   'Land bridge': '陆桥',
   'Air': '空运',
-  'Efficient air freight handling': '高效的空运操作',
-  'Through our extensive network we ship in and out, connecting all major airports, with DDU and DDP services.':
-    '通过我们广泛的网络，我们承接进出口空运，连接所有主要机场，并提供 DDU 和 DDP 服务。',
+  'Reliable air freight handling': '可靠的空运操作',
+  'Through our extensive network we ship in and out, connecting all major airports, with DDU, DDP and DAP terms, including express air freight services.':
+    '依托广泛的网络，我们办理进出口空运，连接所有主要机场，提供 DDU、DDP 与 DAP 条款，并包含快递空运服务。',
   'Airport to door': '机场到门',
   'Sea': '海运',
-  'FCL and LCL services globally': '全球整箱与拼箱服务',
-  'We offer worldwide coverage: direct through major shipping lines, and indirect via NVO services, without cross-stuffing of goods, to and from Iranian ports.':
-    '我们提供全球覆盖：通过主要船公司直航，或通过无船承运人服务中转，货物不换箱，往返伊朗各港口。',
+  'FCL and LCL services': '整箱与拼箱服务',
+  'We offer worldwide coverage: direct through major shipping lines, and indirect via NVO services, to and from Iranian ports.':
+    '我们提供全球覆盖：直接通过主要船公司，或经无船承运人间接安排，往返伊朗港口。',
   'No cross-stuffing': '不换箱',
   'Coverage': '覆盖范围', 'Departures': '发运', 'Service': '服务', 'Cargo': '货物类型',
   'Terms': '条款', 'Via': '经由',
-  'Europe → Türkiye → Iran': '欧洲 → 土耳其 → 伊朗',
-  'Daily, from seven hubs': '每日，从七个枢纽发出',
-  'Türkiye → Iran, with a European land bridge': '土耳其 → 伊朗，附欧洲陆桥',
+  'Europe · Türkiye · China · CIS → Iran': '欧洲 · 土耳其 · 中国 · 独联体 → 伊朗',
+  'Weekly': '每周',
+  'FTL · LTL · Reefer & DG': '整车 · 零担 · 冷藏与危险品',
+  'Türkiye · China → Iran': '土耳其 · 中国 → 伊朗',
   'Containerised · Conventional': '集装箱 · 散货',
   'Multimodal · Combined': '多式联运 · 组合运输',
   'All major airports': '所有主要机场',
-  'Import · Export': '进口 · 出口',
   'Global, to and from Iranian ports': '全球，往返伊朗港口',
+  'DDU · DDP · DAP': 'DDU · DDP · DAP',
+  'Import · Export · Reefer & DG': '进口 · 出口 · 冷藏与危险品',
   'Direct lines · NVO': '直航船公司 · 无船承运人',
-  'FCL · LCL, no cross-stuffing': '整箱 · 拼箱，不换箱',
+  'FCL · LCL · Reefer & DG': '整箱 · 拼箱 · 冷藏与危险品',
 
   /* ── route finder ── */
   'Route & service finder': '路线与服务查询',
-  'Tell us the lane. We’ll tell you the options.': '告诉我们航线，我们告诉您选项。',
-  'Pick an origin and a destination to see which of our modes serve it, and roughly how long each takes.':
-    '选择起点和终点，查看我们哪些运输方式覆盖该路线，以及各自大致需要多长时间。',
+  'Your requirement.': '您的需求。',
   'Origin': '起点',
   'Destination': '终点',
   'Show routes': '显示路线',
@@ -416,10 +398,10 @@ const ZH = {
   /* ── network ── */
   'Our own hubs.':
     '我们的自有枢纽。',
-  'Seven hubs in Europe consolidate cargo for the corridor through Istanbul into Iran. LTL leaves each hub daily. East of Tehran the corridor continues through Kazakhstan and Ürümqi to Xi’an, Shanghai and the East Asian ports.':
-    '欧洲的七个枢纽为经伊斯坦布尔进入伊朗的走廊集拼货物。零担每日从每个枢纽发出。德黑兰以东，走廊经哈萨克斯坦和乌鲁木齐延伸至西安、上海和东亚各港口。',
-  'Head office is in Tehran. The team that books the space also handles customs, the delivery order and final delivery.':
-    '总部位于德黑兰。负责订舱的团队同时办理清关、提货单和最终交付。',
+  'Six hubs in Europe consolidate cargo for the corridor through Istanbul into Iran. LTL leaves each hub weekly.':
+    '欧洲六个枢纽为经伊斯坦布尔进入伊朗的通道集货。零担每周从各枢纽发出。',
+  'Head office is in Tehran. The team that books the space also handles customs, the delivery order, final delivery and all kinds of customer requirement.':
+    '总部设在德黑兰。负责订舱的团队同时办理清关、提货单、最终派送以及各类客户需求。',
   'Talk to the Tehran desk': '联系德黑兰团队',
   'Head office': '总部',
 
@@ -474,23 +456,11 @@ const ZH = {
   'Estimated today': '预计今日',
   'Proof of delivery to follow.': '签收证明随后提供。',
 
-  /* ── about ── */
-  '“We are a business over 40 years, and we have handled most types of goods through various routes.”':
-    '“我们经营四十余年，通过各种路线运送过大多数类型的货物。”',
   'Rahbanan International Transport Co. Ltd.': 'Rahbanan 国际运输有限公司',
-  'Flexible': '灵活',
-  'Out-of-gauge cargo, unusual routings, tight deadlines.':
-    '超限货物、非常规路线、紧迫期限。',
-  'Competitive': '有竞争力',
-  'Direct line and airline contracts, plus NVO options where they price better.':
-    '与船公司和航空公司直接签约，在价格更优时另有无船承运人方案。',
-  'Customer oriented': '以客户为本',
-  'One named contact from booking to delivery order.':
-    '从订舱到提货单，由同一位专人负责。',
 
   /* ── quote form ── */
   'Receive a quote for your shipment.': '获取您货物的报价。',
-  'Contact details and route are required. Everything else helps us price it accurately.':
+  'Contact details and route are required. Everything else helps us quote it accurately.':
     '联系方式和路线为必填项。其余信息有助于我们准确报价。',
   'Contact information': '联系信息',
   'Full name *': '姓名 *',
@@ -515,8 +485,6 @@ const ZH = {
   'Ready date, hazardous class, temperature control, deadlines…':
     '备货日期、危险品等级、温控、期限…',
   'Send request': '发送请求',
-  'Goes to': '发送至',
-  '. We reply within one working day.': '。我们将在一个工作日内回复。',
   'Your email client should now be open with the request filled in. Just press send. If nothing happened, mail us at tehran@rahbanan.com.':
     '您的邮件客户端应已打开并填好请求内容，点击发送即可。如果没有反应，请发邮件至 tehran@rahbanan.com。',
 
@@ -526,13 +494,11 @@ const ZH = {
   'Telephone': '电话',
   'Iran Standard Time, UTC+3:30': '伊朗标准时间 UTC+3:30',
   'Email': '电子邮箱',
-  'Quotes, bookings and documents': '报价、订舱与单证',
   'Location': '地址',
   '95 North Kheradmand Ave': 'North Kheradmand 大街 95 号',
   'Karimkhan Zand Blvd, Tehran, Iran': 'Karimkhan Zand 大道，伊朗德黑兰',
   '95 North Kheradmand Ave, Karimkhan Zand Blvd, Tehran, Iran':
     '伊朗德黑兰 Karimkhan Zand 大道 North Kheradmand 大街 95 号',
-  'About us': '关于我们',
   'Track shipment': '追踪货物',
   'External links': '外部链接',
   'Int’l Transport Companies Association of Iran': '伊朗国际运输公司协会',
@@ -545,13 +511,15 @@ const ZH = {
 
   /* ── places (also used for the labels drawn on the map) ── */
   'Dartford, United Kingdom': '达特福德，英国',
-  'Paris, France': '巴黎，法国',
-  'Lyon, France': '里昂，法国',
+  'Sofia, Bulgaria': '索非亚，保加利亚',
   'Nürnberg, Germany': '纽伦堡，德国',
   'Milan, Italy': '米兰，意大利',
   'Vienna, Austria': '维也纳，奥地利',
   'Istanbul, Türkiye': '伊斯坦布尔，土耳其',
   'Tehran, Iran': '德黑兰，伊朗',
+  'Jebel Ali, UAE': '杰贝阿里，阿联酋',
+  'Nhava Sheva, India': '那瓦舍瓦，印度',
+  'Khorgos, Kazakhstan': '霍尔果斯，哈萨克斯坦',
   'Bandar Abbas, Iran': '阿巴斯港，伊朗',
   'Bandar Imam Khomeini, Iran': '霍梅尼港，伊朗',
   'Almaty, Kazakhstan': '阿拉木图，哈萨克斯坦',
