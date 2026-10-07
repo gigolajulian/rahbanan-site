@@ -85,9 +85,9 @@ p{margin:0}
 .brand__txt strong{font:700 17px/1 var(--disp);letter-spacing:.06em}
 .brand__txt small{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 
-.nav{display:flex;align-items:center;gap:6px}
+.nav{display:flex;align-items:center;gap:6px;flex:none}
 .nav a{text-decoration:none;font-size:14.5px;font-weight:500;color:var(--muted);
-  padding:9px 13px;border-radius:999px;transition:color .2s,background .2s}
+  white-space:nowrap;padding:9px 13px;border-radius:999px;transition:color .2s,background .2s}
 .nav a:hover{color:var(--text);background:rgba(255,255,255,.06)}
 .nav__cta{color:#0a1626 !important;margin-inline-start:8px}
 .nav__cta:hover{color:#0a1626 !important}
@@ -374,12 +374,9 @@ option{background:var(--ink-2)}
   padding:22px 0;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
 
 /* ═══ responsive ══════════════════════════════════════════ */
-@media (max-width:1000px){
-  .net{grid-template-columns:1fr;gap:48px}
-  .ftr__in{grid-template-columns:1fr 1fr;gap:36px}
-  .ftr__brand{grid-column:1/-1}
-}
-@media (max-width:860px){
+/* the English nav needs 1087px of header to sit on one line,
+   so below that the menu takes over */
+@media (max-width:1100px){
   .burger{display:grid}
   .nav{position:fixed;inset:76px 0 auto;flex-direction:column;align-items:stretch;gap:2px;
     background:rgba(4,16,31,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);
@@ -392,6 +389,13 @@ option{background:var(--ink-2)}
   .nav a{padding:14px 4px;font-size:17px;border-radius:10px}
   .nav__cta{margin:10px 0 0;justify-content:center;padding:14px}
   .hdr{background:rgba(4,16,31,.82);backdrop-filter:blur(14px)}
+}
+@media (max-width:1000px){
+  .net{grid-template-columns:1fr;gap:48px}
+  .ftr__in{grid-template-columns:1fr 1fr;gap:36px}
+  .ftr__brand{grid-column:1/-1}
+}
+@media (max-width:860px){
   .finder__form{grid-template-columns:1fr}
   .swap{justify-self:center;transform:rotate(90deg)}
   .swap:active{transform:rotate(270deg)}
@@ -480,7 +484,7 @@ html[lang="fa"] .hero__h1{letter-spacing:0;font-weight:800}
 [dir="rtl"] select{background-position:left 15px center;padding-right:15px;padding-left:38px}
 [dir="rtl"] .swap svg{transform:scaleX(-1)}
 [dir="rtl"] .lane span{display:inline-block;transform:scaleX(-1)}   /* the arrow */
-@media (max-width:860px){
+@media (max-width:1100px){
   [dir="rtl"] .nav{text-align:right}
 }
 
