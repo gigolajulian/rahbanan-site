@@ -141,6 +141,8 @@ const FA = {
   'Head office is in Tehran. The team that books the space also handles customs and all kinds of customer requirements.':
     'دفتر مرکزی در تهران است. تیمی که جا رزرو می‌کند، گمرک و هر نوع نیاز مشتری را هم انجام می‌دهد.',
   'Talk to the Tehran desk': 'تماس با دفتر تهران',
+  'Copy address': 'کپی نشانی',
+  'Copied': 'کپی شد',
   'Head office': 'دفتر مرکزی',
 
   /* ── track & trace ── */
@@ -401,6 +403,8 @@ const ZH = {
   'Head office is in Tehran. The team that books the space also handles customs and all kinds of customer requirements.':
     '总部设在德黑兰。负责订舱的团队同时办理清关以及各类客户需求。',
   'Talk to the Tehran desk': '联系德黑兰团队',
+  'Copy address': '复制地址',
+  'Copied': '已复制',
   'Head office': '总部',
 
   /* ── track & trace ── */

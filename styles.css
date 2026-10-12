@@ -358,6 +358,11 @@ option{background:var(--ink-2)}
 .ccard__k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
 .ccard strong{display:block;margin:12px 0 7px;font:600 20px/1.25 var(--disp)}
 .ccard__m{font-size:13.5px;color:var(--muted)}
+.ccard strong a{color:inherit;text-decoration:none}
+.ccard strong a:hover{text-decoration:underline;text-underline-offset:4px}
+.ccard__copy{margin-top:6px;position:relative;z-index:1;font:500 12.5px var(--sans);color:var(--muted);
+  background:none;border:1px solid var(--line-2);border-radius:0;padding:7px 11px;cursor:pointer}
+.ccard__copy:hover{color:var(--text);border-color:var(--gold)}
 
 /* ── footer ───────────────────────────────────────────────── */
 .ftr{border-top:1px solid var(--line);background:var(--ink-2);padding:62px 0 0}

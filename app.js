@@ -656,6 +656,16 @@ $('#quoteForm').addEventListener('submit', (e) => {
     + 'filled in. Just press send. If nothing happened, mail us at tehran@rahbanan.com.');
 });
 
+/* Copy the Tehran address; if the clipboard is blocked, show the address itself. */
+$$('[data-copy]').forEach(btn => btn.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(btn.dataset.copy);
+    btn.textContent = tr('Copied');
+  } catch {
+    btn.textContent = btn.dataset.copy;
+  }
+}));
+
 /* Re-render anything we generated when the language flips. */
 if (window.i18n) window.i18n.on(() => {
   drawHubs();
