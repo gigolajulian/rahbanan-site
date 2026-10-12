@@ -244,8 +244,6 @@ const FA = {
   'Shipping Association of Iran': 'انجمن کشتیرانی ایران',
   'Freight forwarder software (OTMS)': 'نرم‌افزار فورواردری (OTMS)',
   'XE live exchange rates': 'نرخ لحظه‌ای ارز XE',
-  'Photography:': 'عکس‌ها:',
-  '· Transport is art.': '· حمل‌ونقل، هنر است.',
 
   /* ── places (also used for the labels drawn on the map) ── */
   'Dartford, United Kingdom': 'دارتفورد، بریتانیا',
@@ -506,8 +504,6 @@ const ZH = {
   'Shipping Association of Iran': '伊朗航运协会',
   'Freight forwarder software (OTMS)': '货代软件（OTMS）',
   'XE live exchange rates': 'XE 实时汇率',
-  'Photography:': '摄影：',
-  '· Transport is art.': '· 运输是艺术。',
 
   /* ── places (also used for the labels drawn on the map) ── */
   'Dartford, United Kingdom': '达特福德，英国',
