@@ -97,8 +97,8 @@ const FA = {
   'FCL & LCL ocean freight': 'حمل دریایی FCL و LCL',
   'Origin and destination are the same. Pick two different places.':
     'مبدأ و مقصد یکسان هستند. دو مکان متفاوت انتخاب کنید.',
-  'Transit times are indicative door-to-door bands, excluding customs dwell.':
-    'زمان‌های حمل، بازه‌های تقریبی درب تا درب و بدون احتساب توقف گمرکی است.',
+  'Transit times are estimates, door-to-door, excluding customs dwell.':
+    'زمان‌های حمل تخمینی و از درب تا درب است، بدون احتساب توقف گمرکی.',
   'Ask us for a firm quote on this lane': 'برای این مسیر نرخ قطعی بگیرید',
 
   /* lane notes */
@@ -359,8 +359,8 @@ const ZH = {
   'FCL & LCL ocean freight': '整箱与拼箱海运',
   'Origin and destination are the same. Pick two different places.':
     '起点与终点相同。请选择两个不同的地点。',
-  'Transit times are indicative door-to-door bands, excluding customs dwell.':
-    '运输时间为门到门的参考区间，不含清关停留时间。',
+  'Transit times are estimates, door-to-door, excluding customs dwell.':
+    '运输时间为门到门的预估值，不含清关停留时间。',
   'Ask us for a firm quote on this lane': '获取此路线的正式报价',
 
   /* lane notes */

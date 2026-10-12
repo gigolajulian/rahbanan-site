@@ -88,6 +88,11 @@ const LANES = {
              note: 'Consolidated out of Shanghai, Shenzhen and Busan.' },
 };
 
+/* Single-lane overrides, keyed by the two place ids (sorted), applied on top of the region pair. */
+const LANE_OVERRIDES = {
+  'nurnberg|tehran': { land: '12–20 days' },
+};
+
 const MODES = [
   ['land', 'Land', 'FTL &amp; LTL road freight'],
   ['rail', 'Rail', 'Multimodal land bridge'],
@@ -530,7 +535,8 @@ function showLane() {
     return;
   }
 
-  const lane = LANES[[A.region, B.region].sort().join('|')] || LANES['WW|WW'];
+  const lane = { ...(LANES[[A.region, B.region].sort().join('|')] || LANES['WW|WW']),
+                 ...LANE_OVERRIDES[[A.id, B.id].sort().join('|')] };
   const served = MODES.filter(([k]) => lane[k]);
 
   fOut.innerHTML = `
@@ -544,7 +550,7 @@ function showLane() {
         </li>`).join('')}
     </ul>
     <p class="note"><span>${tr(lane.note)}</span>
-      <span>${tr('Transit times are indicative door-to-door bands, excluding customs dwell.')}</span>
+      <span>${tr('Transit times are estimates, door-to-door, excluding customs dwell.')}</span>
       <a href="#quote" data-lane>${tr('Ask us for a firm quote on this lane')}</a>.
     </p>`;
 
