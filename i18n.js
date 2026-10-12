@@ -138,8 +138,8 @@ const FA = {
     'هاب‌های خودمان.',
   'Six hubs in Europe consolidate cargo for the corridor through Istanbul into Iran. LTL leaves each hub weekly.':
     'شش هاب در اروپا بار را برای کریدور از استانبول به ایران تجمیع می‌کنند. حمل LTL هفتگی از هر هاب حرکت می‌کند.',
-  'Head office is in Tehran. The team that books the space also handles customs, the delivery order and all kinds of customer requirements.':
-    'دفتر مرکزی در تهران است. تیمی که جا رزرو می‌کند، گمرک، ترخیصیه و هر نوع نیاز مشتری را هم انجام می‌دهد.',
+  'Head office is in Tehran. The team that books the space also handles customs and all kinds of customer requirements.':
+    'دفتر مرکزی در تهران است. تیمی که جا رزرو می‌کند، گمرک و هر نوع نیاز مشتری را هم انجام می‌دهد.',
   'Talk to the Tehran desk': 'تماس با دفتر تهران',
   'Head office': 'دفتر مرکزی',
 
@@ -400,8 +400,8 @@ const ZH = {
     '我们的自有枢纽。',
   'Six hubs in Europe consolidate cargo for the corridor through Istanbul into Iran. LTL leaves each hub weekly.':
     '欧洲六个枢纽为经伊斯坦布尔进入伊朗的通道集货。零担每周从各枢纽发出。',
-  'Head office is in Tehran. The team that books the space also handles customs, the delivery order and all kinds of customer requirements.':
-    '总部设在德黑兰。负责订舱的团队同时办理清关、提货单以及各类客户需求。',
+  'Head office is in Tehran. The team that books the space also handles customs and all kinds of customer requirements.':
+    '总部设在德黑兰。负责订舱的团队同时办理清关以及各类客户需求。',
   'Talk to the Tehran desk': '联系德黑兰团队',
   'Head office': '总部',
 
