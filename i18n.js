@@ -84,7 +84,7 @@ const FA = {
 
   /* ── route finder ── */
   'Route & service finder': 'یافتن مسیر و سرویس',
-  'Your requirement.': 'نیاز شما.',
+  'Tell us about your requirement.': 'درباره نیاز خود به ما بگویید.',
   'Origin': 'مبدأ',
   'Destination': 'مقصد',
   'Show routes': 'نمایش مسیرها',
@@ -346,7 +346,7 @@ const ZH = {
 
   /* ── route finder ── */
   'Route & service finder': '路线与服务查询',
-  'Your requirement.': '您的需求。',
+  'Tell us about your requirement.': '请告诉我们您的需求。',
   'Origin': '起点',
   'Destination': '终点',
   'Show routes': '显示路线',
